@@ -19,6 +19,9 @@ opening=(PAPER/'opening.md').read_text(encoding='utf-8').strip()
 source=section('source-provenance.md','3. Source provenance and released particle data')
 methods=section('methods-results.md','4. First-passage attribution and recorded region histories')
 measured=section('released-batch-results.md','5. Matched attribution on the released particle batches')
+diagnostics=(PAPER/'resampling-validation.md').read_text(encoding='utf-8').strip()
+assert diagnostics.startswith('### ')
+measured += '\n\n'+diagnostics
 ancillary=section('ancillary-checks.md','Appendix B. Ancillary source and diagnostic checks')
 proxy=section('proxy-validation.md','Appendix C. Positive checks and inferred display reconstruction')
 upstream=section('audited-function.md','Appendix D. Deposited first-passage routine')
@@ -36,7 +39,7 @@ pandoc=os.environ.get('PANDOC') or shutil.which('pandoc')
 if not pandoc:
     raise RuntimeError('Pandoc is required for manuscript assembly; install it on PATH or set PANDOC to its executable.')
 subprocess.run([pandoc,str(PAPER/'manuscript.md'),'-f','markdown+tex_math_dollars+raw_tex+autolink_bare_uris',
-    '-t','latex','-o',str(PAPER/'latex/body.tex')],check=True)
+    '-t','latex','--no-highlight','-o',str(PAPER/'latex/body.tex')],check=True)
 body=(PAPER/'latex/body.tex').read_text(encoding='utf-8').replace('../figures/','images/')
 def code_span(match):
     if ' ' in match[1]:return match[0]
@@ -45,13 +48,18 @@ body=re.sub(r'\\texttt\{([^{}]*)\}',code_span,body)
 body,listing_count=re.subn(r'\\begin\{verbatim\}\n(def get_energy_by_region_w_bands.*?)(?:\n)\\end\{verbatim\}',
     lambda m:r'\begin{lstlisting}[firstnumber=344]'+'\n'+m[1]+'\n'+r'\end{lstlisting}',body,flags=re.S)
 assert listing_count==1,listing_count
+# Portable reproduction commands can exceed one printed line. Preserve their
+# literal contents while allowing TeX to wrap them without adding line numbers.
+body=re.sub(r'\\begin\{verbatim\}\n(.*?)\n\\end\{verbatim\}',
+    lambda m:r'\begin{lstlisting}[numbers=none]'+'\n'+m[1]+'\n'+r'\end{lstlisting}',body,flags=re.S)
 def keep_small_table(match):
     # Both manuscript tables have four rows. Keep each together so a float
     # cannot strand a repeated longtable header on the following page.
     table=match[0].replace(r'\begin{longtable}[]',r'\begin{tabular}')
     table=table.replace('\\endhead\n\\bottomrule\\noalign{}\n\\endlastfoot\n','')
     table=table.replace(r'\end{longtable}',r'\bottomrule\noalign{}'+'\n'+r'\end{tabular}')
-    return r'\par\noindent\begin{minipage}{\linewidth}'+'\n'+table+'\n'+r'\end{minipage}\par'
+    font=r'\small' if 'Conditional' in table and 'percentile' in table else ''
+    return r'\par\noindent\begin{minipage}{\linewidth}'+font+'\n'+table+'\n'+r'\end{minipage}\par'
 body,table_count=re.subn(r'\\begin\{longtable\}.*?\\end\{longtable\}',keep_small_table,body,flags=re.S)
 assert table_count>=2,table_count
 body=re.sub(r'^(\\subsection\{[45678]\. )',r'\\FloatBarrier\n\1',body,flags=re.M)

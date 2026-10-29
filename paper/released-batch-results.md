@@ -24,6 +24,21 @@ equals either boundary. The intermediate staging folder contributes
 folder contributes 402 intermediate-band histories and all 84 high-band
 histories. Folder averages are not averaged together.
 
+That composition can matter for extrapolation. Within the intermediate
+band, the 265 `p008` records have a downstream FP particle mean of
+0.885079 and a symmetric mean of 0.916422, a paired increase of 3.13425
+percentage points. The 402 records supplied by the high staging folder
+instead have means 0.616068 and 0.541209, a paired decrease of 7.48594
+points. The released union weights these observed groups by their record
+counts, so their opposite shifts combine to the reported decrease of
+3.26652 points. This is an observed mixture, not an estimate of the
+mixture in the missing batches. The release may over- or underrepresent
+particular energy ranges, initial locations or return histories; neither
+its selection probabilities nor the missing conditional means are known.
+No direction or size of a full-population bias follows from these group
+comparisons. A resampling diagnostic conditional on the released records
+also cannot repair an unknown release-selection mechanism.
+
 The primary weights are explicitly unit empirical weights. The example
 island deck assigns the same physical macro-particle `weight = Np/Ne`
 to all tagged electron species, so those weights would cancel in the

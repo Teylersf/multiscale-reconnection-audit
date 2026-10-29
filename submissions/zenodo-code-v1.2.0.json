@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-29T19:51:24.855649+00:00",
+  "record_url": "https://zenodo.org/records/23777646",
+  "record_api_url": "https://zenodo.org/api/records/23777646",
+  "record_api_http_status": 200,
+  "record_status": "published",
+  "submitted": true,
+  "doi": "10.5281/zenodo.23777646",
+  "title": "Computational evidence for First-passage attribution and regional particle energization in multiscale reconnection",
+  "version": "1.2.0",
+  "resource_type": {
+    "title": "Software",
+    "type": "software"
+  },
+  "creators": [
+    {
+      "name": "Kalin, Taylor",
+      "orcid": "0009-0003-9000-9315"
+    }
+  ],
+  "publication_date": "2026-10-29",
+  "record_created": "2026-10-29T19:47:29.539615+00:00",
+  "record_updated": "2026-10-29T19:47:30.023530+00:00",
+  "record_level_license": {
+    "id": "cc-by-4.0"
+  },
+  "latest_version_relation": [
+    {
+      "index": 2,
+      "is_last": true,
+      "parent": {
+        "pid_type": "recid",
+        "pid_value": "23774455"
+      }
+    }
+  ],
+  "repository_URL": "https://github.com/Teylersf/multiscale-reconnection-audit/tree/83660394cdbd789f297c6da5f18470c00942254a",
+  "component_license_note": "Record-level CC BY 4.0 is accompanied by explicit description/package terms: original code MIT; original text/figures CC BY 4.0; upstream fixtures/excerpt CC0; derived preprint coordinates separately attributed.",
+  "component_license_files": {
+    "LICENSE-CODE": {
+      "present_once": true,
+      "sha256": "8695b6201c88b3a589e31f7436d7e1d3b36986bfaed9a581d7a682470ddb05dc",
+      "MIT_identified": true,
+      "CC_BY_4_identified": null
+    },
+    "LICENSE-MANUSCRIPT": {
+      "present_once": true,
+      "sha256": "d3fa01521f2e1a1c59b8894920ee5f64632d6cebbbabbc8f524322006512ae1d",
+      "MIT_identified": null,
+      "CC_BY_4_identified": true
+    }
+  },
+  "snapshot_commit": "83660394cdbd789f297c6da5f18470c00942254a",
+  "archive_member_count": 58,
+  "file": {
+    "name": "multiscale-reconnection-audit-code-v1.2.0.zip",
+    "record_bytes": 4542752,
+    "record_checksum": "md5:b134926814e32377da90ac4c381d5c74",
+    "sha256": "0398c88dc2a68471e283b75240d95235ad78bcc2f4f1946fcb814b3f966954fa",
+    "matches_frozen_local_archive": true
+  },
+  "anonymous_download": {
+    "requested_url": "https://zenodo.org/api/records/23777646/files/multiscale-reconnection-audit-code-v1.2.0.zip/content",
+    "http_status": 200,
+    "content_type": "application/octet-stream",
+    "bytes": 4542752,
+    "sha256": "0398c88dc2a68471e283b75240d95235ad78bcc2f4f1946fcb814b3f966954fa",
+    "final_host": "zenodo.org",
+    "final_path": "/api/records/23777646/files/multiscale-reconnection-audit-code-v1.2.0.zip/content",
+    "checked_at_utc": "2026-10-29T19:51:21.736472+00:00",
+    "elapsed_seconds": 9.063
+  },
+  "datacite": {
+    "requested_url": "https://api.datacite.org/dois/10.5281/zenodo.23777646",
+    "http_status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 10220,
+    "sha256": "dd8a485dc2bd2e64d1e3c70d3d565585aa8918b91c3298530fc2dd07f0c2c51c",
+    "final_host": "api.datacite.org",
+    "final_path": "/dois/10.5281/zenodo.23777646",
+    "checked_at_utc": "2026-10-29T19:51:22.535539+00:00",
+    "elapsed_seconds": 0.766,
+    "state": "findable",
+    "doi": "10.5281/zenodo.23777646",
+    "titles": [
+      {
+        "title": "Computational evidence for First-passage attribution and regional particle energization in multiscale reconnection"
+      }
+    ],
+    "creators": [
+      {
+        "name": "Kalin, Taylor",
+        "givenName": "Taylor",
+        "familyName": "Kalin",
+        "nameIdentifiers": [
+          {
+            "nameIdentifier": "0009-0003-9000-9315",
+            "nameIdentifierScheme": "ORCID"
+          }
+        ]
+      }
+    ],
+    "types": {
+      "ris": "COMP",
+      "bibtex": "misc",
+      "citeproc": "article",
+      "schemaOrg": "SoftwareSourceCode",
+      "resourceType": "",
+      "resourceTypeGeneral": "Software"
+    },
+    "version": "1.2.0",
+    "rightsList": [
+      {
+        "rights": "Creative Commons Attribution 4.0 International",
+        "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+        "schemeUri": "https://spdx.org/licenses/",
+        "rightsIdentifier": "cc-by-4.0",
+        "rightsIdentifierScheme": "SPDX"
+      },
+      {
+        "rights": "MIT License",
+        "rightsUri": "https://opensource.org/licenses/MIT",
+        "schemeUri": "https://spdx.org/licenses/",
+        "rightsIdentifier": "mit",
+        "rightsIdentifierScheme": "SPDX"
+      },
+      {
+        "rights": "Copyright (C) 2026 Taylor Kalin; upstream rights as attributed.",
+        "rightsUri": "http://rightsstatements.org/vocab/InC/1.0/"
+      }
+    ],
+    "registered": "2026-10-29T19:47:31.000Z"
+  },
+  "doi_resolver": {
+    "requested_url": "https://doi.org/10.5281/zenodo.23777646",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 86097,
+    "sha256": "5a63a66f92d5cfb093b5f627fad438084b9ebc18dd2f31d46238bb1b65137673",
+    "final_host": "zenodo.org",
+    "final_path": "/records/23777646",
+    "checked_at_utc": "2026-10-29T19:51:24.847134+00:00",
+    "elapsed_seconds": 2.312
+  },
+  "checks": {
+    "published": true,
+    "correct_creator": true,
+    "software_type": true,
+    "correct_title": true,
+    "version_1_2_0": true,
+    "current_latest_version": true,
+    "repository_URL_pins_snapshot": true,
+    "only_expected_new_ZIP": true,
+    "snapshot_commit_in_description": true,
+    "anonymous_download_HTTP200": true,
+    "anonymous_download_matches_expected_sha256": true,
+    "anonymous_download_matches_record_size": true,
+    "anonymous_download_matches_record_md5": true,
+    "MIT_code_license_preserved": true,
+    "CC_BY_text_figures_license_preserved": true,
+    "safe_archive_member_paths": true,
+    "datacite_findable": true,
+    "doi_resolves_to_record": true,
+    "official_registration_authority_DataCite": true
+  },
+  "all_checks_passed": true,
+  "artifact_scope": "Published software/data archive verification only; no manuscript release or acceptance is established.",
+  "paper_publication_claimed": false,
+  "warnings": [],
+  "verification_scope": "Anonymous read-only HTTP checks with TaylorKalinResearch User-Agent and 30-second request deadlines. No authentication, signed final URL query, private local path or external mutation is retained.",
+  "DOI_registration_authority_service": {
+    "url": "https://doi.org/ra/10.5281/zenodo.23777646",
+    "http_status": 200,
+    "checked_at_utc": "2026-10-29T19:52:01.695453+00:00",
+    "sha256": "225b6267944c9797c16738e69dd7c1a7f9885b085dff862f201e1015187b253c",
+    "records": [
+      {
+        "DOI": "10.5281/zenodo.23777646",
+        "RA": "DataCite"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "study": "multiscale-reconnection-audit",
+  "state": "sent_verified",
+  "verified_at_utc": "2026-10-29T19:59:19.378802+00:00",
+  "sent_at_utc": "2026-10-29T19:58:41Z",
+  "from": "teylersf@gmail.com",
+  "to": "velberg@mit.edu",
+  "subject": "Fig. 6 data and analysis provenance request for arXiv:2511.15988v1",
+  "outcome_at_send": "Reply pending; no author endorsement or new data received.",
+  "scope": "Request for missing Figure 6 cohort histories, weights and analysis provenance; this record confirms dispatch, not a response."
+}

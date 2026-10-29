@@ -1,7 +1,7 @@
 {
-  "checked_at_utc": "2026-10-29T19:13:01.300099+00:00",
-  "canonical_markdown_sha256": "6f0b805ef0f2e9172be416e3ed3aef71679f21320d58babc850e6aaad8217346",
-  "submitted_body_sha256": "9bb3adcaf206de99c767ca050b4af36a53d013630f4f70c98b6c00c596b8becc",
+  "checked_at_utc": "2026-10-29T20:00:53.095518+00:00",
+  "canonical_markdown_sha256": "110e1d04e1990b0cd8c060ee3ba1ed91756042f40f75867e94dca8ebff6e7c67",
+  "submitted_body_sha256": "a7950e8f0b5b7be77d0cd40be31c574f563cd7afe64594732903c642f4cfd2d4",
   "abstract_sha256": "09b59246451e40c20a5057655d2ded4129d13b193fe74895077e94db00c4b96e",
   "transformations": [
     "Remove duplicate body abstract; identical abstract supplied as metadata.",
@@ -9,5 +9,5 @@
   ],
   "all_scientific_body_and_references_preserved": true,
   "canonical_abstract_retained": true,
-  "reference_count": 10
+  "reference_count": 12
 }

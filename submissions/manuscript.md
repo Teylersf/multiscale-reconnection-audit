@@ -6,7 +6,7 @@ Independent researcher; https://taylorkalin.com
 
 ORCID: 0009-0003-9000-9315; correspondence: teylersf@gmail.com
 
-Version 1.1.0; 29 October 2026
+Version 1.2.0; 29 October 2026
 
 
 ## 1. Introduction
@@ -310,7 +310,7 @@ resolved continuous channel partition. The examples were selected by the
 authors for illustration. They neither represent an unbiased cohort sample nor
 determine the size or sign of a change to the published population mean.
 
-![Synthetic counterexample and four selected deposited histories. Panel (a) shows an intermediate-band return to the sheet with zero increment at every label transition. Panel (b) compares the same trace's first-passage and full-history allocations; both conserve total net gain. Panel (c) shows downstream net gain divided by total net gain for the four original examples. Left- and right-endpoint markers are alternative sampled conventions, not confidence intervals, and their connecting segments are not certified continuous-work bounds.](https://github.com/Teylersf/multiscale-reconnection-audit/raw/a8cb56dadaf6fdf6d07ce6aba0d94b9ad291f9d5/figures/first-passage-attribution.png)
+![Synthetic counterexample and four selected deposited histories. Panel (a) shows an intermediate-band return to the sheet with zero increment at every label transition. Panel (b) compares the same trace's first-passage and full-history allocations; both conserve total net gain. Panel (c) shows downstream net gain divided by total net gain for the four original examples. Left- and right-endpoint markers are alternative sampled conventions, not confidence intervals, and their connecting segments are not certified continuous-work bounds.](https://github.com/Teylersf/multiscale-reconnection-audit/raw/83660394cdbd789f297c6da5f18470c00942254a/figures/first-passage-attribution.png)
 
 ### Particle-mean and energy-weighted fractions
 
@@ -382,6 +382,21 @@ equals either boundary. The intermediate staging folder contributes
 folder contributes 402 intermediate-band histories and all 84 high-band
 histories. Folder averages are not averaged together.
 
+That composition can matter for extrapolation. Within the intermediate
+band, the 265 `p008` records have a downstream FP particle mean of
+0.885079 and a symmetric mean of 0.916422, a paired increase of 3.13425
+percentage points. The 402 records supplied by the high staging folder
+instead have means 0.616068 and 0.541209, a paired decrease of 7.48594
+points. The released union weights these observed groups by their record
+counts, so their opposite shifts combine to the reported decrease of
+3.26652 points. This is an observed mixture, not an estimate of the
+mixture in the missing batches. The release may over- or underrepresent
+particular energy ranges, initial locations or return histories; neither
+its selection probabilities nor the missing conditional means are known.
+No direction or size of a full-population bias follows from these group
+comparisons. A resampling diagnostic conditional on the released records
+also cannot repair an unknown release-selection mechanism.
+
 The primary weights are explicitly unit empirical weights. The example
 island deck assigns the same physical macro-particle `weight = Np/Ne`
 to all tagged electron species, so those weights would cancel in the
@@ -439,7 +454,7 @@ change the table at six decimals.
 | High ($n=84$) | Symmetric | 0.370129 | 0.393724 |
 | High ($n=84$) | Right endpoint | 0.369515 | 0.410033 |
 
-![Matched downstream fractions in the pooled available histories. The two curves compare a particle mean and a ratio of total signed gains on identical selected IDs. The four categorical positions are distinct attribution conventions; the connecting lines do not describe a time evolution. Panel ordinate scales differ. Unit empirical weights are used. There are no population confidence intervals, and endpoint sensitivity is not a continuous-work uncertainty bound.](https://github.com/Teylersf/multiscale-reconnection-audit/raw/a8cb56dadaf6fdf6d07ce6aba0d94b9ad291f9d5/figures/public-batch-comparison.png)
+![Matched downstream fractions in the pooled available histories. The two curves compare a particle mean and a ratio of total signed gains on identical selected IDs. The four categorical positions are distinct attribution conventions; the connecting lines do not describe a time evolution. Panel ordinate scales differ. Unit empirical weights are used. There are no population confidence intervals, and endpoint sensitivity is not a continuous-work uncertainty bound.](https://github.com/Teylersf/multiscale-reconnection-audit/raw/83660394cdbd789f297c6da5f18470c00942254a/figures/public-batch-comparison.png)
 
 For the available intermediate histories, downstream remains larger
 than its signed non-downstream complement under every displayed
@@ -503,6 +518,101 @@ the small endpoint-convention differences in one band. The repository
 provides an explicit public fetch command, the 32-file hash inventory,
 a memory-bounded analyzer and compact NPZ/CSV results; the 3.11 GB raw
 files remain outside the code archive.
+
+### Complete-function validation and conditional empirical resampling
+
+We extended the source-function validation from the previous systematic
+32-history check per staging batch to every released input history. The new
+validation rechecks the sizes and SHA-256 values of all 32 raw files, retains
+their filename-ordered time chunks, and assembles only the stored float32
+Lorentz factors and losslessly converted integer region labels. These arrays
+occupy 204,431,460 bytes. The complete, unchanged 60-line function printed in
+Appendix D is then executed once on the pooled 1,003 histories, rather than
+only on the 751 histories selected beforehand. Its own strict final-energy
+tests select 667 intermediate and 84 high-band histories and exclude the
+remaining 252. Both returned index lists and all six returned regional-gain
+arrays agree exactly with the streaming results, with zero mismatching values
+and zero absolute difference. Thus the reported first-passage values are now
+validated by a direct complete-function execution on every selected history.
+The original module's unrelated top-level filesystem operations are not run.
+
+The source returns float64 arrays containing differences calculated with the
+native float32 input arithmetic. Our comparisons use the common denominator
+$A_p=\gamma_{p,N}-\gamma_{p,0}$ evaluated in float64 from those same stored
+endpoints. Replacing that denominator by the source's sum of returned phase
+terms changes the downstream particle mean by $-6.56\times10^{-11}$ in the
+intermediate band and $-3.35\times10^{-9}$ in the high band. These small
+denominator effects are reported separately from the attribution differences;
+no higher-precision particle history is inferred.
+
+To describe the dispersion under an explicit empirical resampling model, we
+also apply a paired history bootstrap [11]. Within each already selected
+energy band, each replicate draws the original number of complete history IDs
+with replacement and equal empirical probability. The same resampled IDs
+are used for first passage, all three full-history conventions and both
+estimands. Write
+$D_{p}^{(m)}=G_{p,\mathrm{DS}}^{(m)}-G_{p,\mathrm{DS}}^{\mathrm{FP}}$
+for $m\in\{L,S,R\}$. For one resampled index list $I_b$, the two paired
+differences are
+
+$$
+\Delta\overline f_b^{(m)}=
+ \frac{1}{n}\sum_{p\in I_b}\frac{D_p^{(m)}}{A_p},\qquad
+\Delta F_b^{(m)}=
+ \frac{\sum_{p\in I_b}D_p^{(m)}}{\sum_{p\in I_b}A_p}.
+$$
+
+Repeated IDs appear with their draw multiplicity. The ratio-of-sums
+denominator is recomputed from those same draws, rather than resampling
+numerators and denominators independently. All selected $A_p$ are positive;
+regional gains and differences remain signed. We use 20,000 replicates per
+band, seed 20261029, PCG64 with separately identified band streams, and
+2.5th and 97.5th percentiles with NumPy's linear quantile rule. Computation
+uses blocks of 256 replicates without changing the resampling unit. The
+following values are changes from first passage, in percentage points.
+
+| Available band | Convention | Particle-mean change | Conditional 2.5--97.5 percentile range | Total-net-gain-share change | Conditional 2.5--97.5 percentile range |
+|---|---|---:|---:|---:|---:|
+| Intermediate ($n=667$) | Left | -7.0218 | [-11.0001, -3.0968] | -8.2268 | [-12.0219, -4.5109] |
+| Intermediate ($n=667$) | Symmetric | -3.2665 | [-6.3470, -0.2036] | -5.7232 | [-8.6783, -2.8621] |
+| Intermediate ($n=667$) | Right | +0.4888 | [-4.3746, +5.8511] | -3.2197 | [-7.0472, +0.7179] |
+| High ($n=84$) | Left | -12.9576 | [-22.0785, -4.4437] | -11.3545 | [-19.4089, -4.4561] |
+| High ($n=84$) | Symmetric | -13.0189 | [-20.4864, -6.6663] | -9.7236 | [-17.2950, -3.3956] |
+| High ($n=84$) | Right | -13.0803 | [-22.0611, -4.3208] | -8.0927 | [-17.5015, +0.9552] |
+
+These are central 95% **conditional iid empirical bootstrap percentile
+ranges**, not population confidence intervals, significance tests or physical
+uncertainty bounds. The iid draws describe variation under the empirical
+distribution of the available histories. Archive release probabilities are
+unknown, so this procedure cannot account for selection into the public
+files. Particles from one simulation can also share structures and be
+correlated; resampling them as independent histories can understate
+uncertainty. Independent-run or defensible structure-cluster replication is
+not available here. The ranges do not cover temporal or mask cadence, hidden
+recrossings, unresolved electric work, alternative release compositions or
+omitted histories. In particular, an interval endpoint's position relative
+to zero is not presented as evidence of population-wide statistical
+significance. The high-band first-passage energy share was already below
+one half; these added diagnostics do not change that estimand distinction.
+
+The portable script is
+`experiments/validate_full_source_and_bootstrap.py`. After obtaining the
+already documented raw cache, the new calculation is invoked as follows;
+the command performs no download:
+
+```text
+python experiments/validate_full_source_and_bootstrap.py --cohort-dir COHORT_DIRECTORY --output-dir NEW_DIAGNOSTIC_DIRECTORY
+```
+
+Choose a fresh output directory to retain the frozen published results.
+The script writes newly named v1.2.0 validation, bootstrap JSON, replicate
+NPZ and range-table CSV files, leaving the v1.1 outputs unchanged.
+`results/full-source-validation-v1.2.0.json` records the full source execution
+and raw-file bindings. `results/paired-history-bootstrap-v1.2.0.json` records
+the resampling specification, percentile ranges and the hashes of all
+replicate arrays and the full numeric table. Constant-shift, signed scalar
+reference and block-size-invariance checks validate the paired implementation.
+These remain computational checks, rather than independent human peer review.
 
 ## 6. Extending the comparison to the historical population
 
@@ -593,6 +703,8 @@ The source scope is the supplied 11-page arXiv:2511.15988v1, verified byte for b
 
 The four trajectory examples were selected by the original authors for illustration. Three exactly match gamma, position and region histories in the larger public batch over all 40,764 samples. The revised analysis also includes every one of the 1,003 posted batch histories and applies common final-energy cuts after pooling; 667 intermediate and 84 high-energy records enter the main comparisons. Neither complete processing of these files nor their internal example matches establishes random release selection, inclusion probabilities or a revised full-population Figure 6 mean. The available intermediate-band first-passage mean differs from the published point. The high-band mean agrees only at three-decimal rounding. An exact historical cohort, its complete weights, every plotting operation and the executed simulation binary have not been identified. No claim of reversal of the full-cohort downstream/current-sheet ordering follows.
 
+On 29 October 2026 at 19:58:41 UTC, Taylor Kalin sent a data and provenance request to Alexander Velberg at velberg@mit.edu for the omitted Figure 6 cohort histories, weights and analysis provenance. Dispatch was verified in the sender's Sent record; `submissions/author-correspondence.json` records the request. A reply and any additional data remain pending as of the recorded verification. Sending the request does not establish the historical cohort, receipt by the recipient or author endorsement.
+
 The discrete full-history estimators retain all recorded visits and signed energy increments. Their left, right and symmetric endpoint conventions can differ considerably when energy changes during recorded transitions. Bounds among endpoint allocations do not bound true continuous work when there are unresolved crossings, returns or sign-changing work within a sample interval. A physical reanalysis should evaluate electric work together with sufficiently resolved position and region histories, test sampling cadence and mask choices, and report uncertainty. Our synthetic examples avoid this ambiguity by construction; the real examples do not.
 
 Pooling the primary sheet with the islands is disclosed in the source Fig. 6 caption and implemented in the posted statistics. We retain the source phase pool as such and report actual CS-plus-islands and all-non-downstream pools separately. A particle-mean ratio is also a legitimate statistic. Its mathematical distinction from the share of total energy is not itself an implementation error. A complete population analysis should identify the chosen estimand, macro-particle weights and sample selection, and retain or explicitly account for negative net increments rather than silently clipping them.
@@ -604,6 +716,10 @@ The electron-frame diagnostic remains useful and Lorentz invariant as defined. I
 **Code and data availability.** The public repository is https://github.com/Teylersf/multiscale-reconnection-audit . Its computational snapshot `e3119e6ee98f6d4bfc760a7c851d33f90b3a7d6b` is archived as software version 1.0.0 at https://doi.org/10.5281/zenodo.23774456 [9]. This DOI identifies the code and data archive, not a paper acceptance. The repository contains this manuscript, original audit code, reproducible results and figures, exact upstream provenance and a small set of permitted CC0 fixtures. The default particle-attribution reproduction uses numeric-only NPZ arrays and a pinned excerpt of the deposited function. It does not execute the original script's top-level filesystem operations or load arbitrary object pickles. The analysis records the original and converted file hashes and per-array byte digests. The proxy reconstruction and analytic checks have separate scripts and results. All are designed to run from repository-local inputs; no original HPC path, GPU allocation or full particle-in-cell rerun is required. The release records exact scientific artifact hashes and separates venue receipts from numerical evidence.
 
 The revised computational snapshot `a8cb56dadaf6fdf6d07ce6aba0d94b9ad291f9d5` is archived as software version 1.1.0 at https://doi.org/10.5281/zenodo.23775167 [10], with direct record https://zenodo.org/records/23775167 . It adds the serialized public-data fetcher, streaming paired analysis, compact per-particle NPZ/CSV exports, independent summary verifier and all source-link receipts. The archive is 2,702,929 bytes, with SHA-256 `82835a9d7e53c929a690cc5ccc30f3cfdc0efa75ea23344c9f6682ad737b421e`. The 3,107,362,288 bytes of raw batch arrays are linked through their 32-file hash inventory rather than duplicated in this package. The software DOI is registered through DataCite; its primary registry record is https://api.datacite.org/dois/10.5281/zenodo.23775167 . Snapshot-bound checks of the compact exports need no network. A complete raw-data reproduction requires the explicit public download; fresh runtime metadata may differ from the frozen report's byte hash. No private data or author confirmation has been obtained for the unprovided historical cohort.
+
+The additional complete-function validation and resampling diagnostics are archived as software version 1.2.0 [12], DOI https://doi.org/10.5281/zenodo.23777646 , direct record https://zenodo.org/records/23777646 . Its computational snapshot is `83660394cdbd789f297c6da5f18470c00942254a`. The 4,542,752-byte archive has SHA-256 `0398c88dc2a68471e283b75240d95235ad78bcc2f4f1946fcb814b3f966954fa`. Newly named diagnostic outputs preserve all earlier versioned numeric evidence. A fresh output directory permits repetition without overwriting the frozen results.
+
+For references [9] and [10], DOI resolution was verified directly on 29 October 2026. The DataCite record for [9] returned HTTP 200 and state `findable` at 18:26:49 UTC; its doi.org link resolved to Zenodo record 23774456 with HTTP 200 at 18:26:52 UTC. Reference [10] returned the same positive DataCite state at 19:12:20 UTC and resolved to record 23775167 at 19:12:22 UTC. The official doi.org registration-authority responses identify DataCite. Primary registry links are https://api.datacite.org/dois/10.5281/zenodo.23774456 and https://api.datacite.org/dois/10.5281/zenodo.23775167 . Timestamped receipts preserve these checks and anonymous archive hashes. Crossref `not_found` is not evidence that a separately verified DataCite DOI is invalid.
 
 **Authorship and assistance.** Taylor Kalin is the canonical author and is responsible for this audit and its release. AI tools assisted with source retrieval, mathematical checks, code, internal adversarial review and drafting. These checks are not represented as independent human peer review. Separately authorized agent editions identify their agent byline and retain Taylor Kalin's human-operator and canonical-author credit when a venue requires agent authors.
 
@@ -1226,3 +1342,7 @@ that these exact source bytes were executed before the v1 preprint.
 [9] T. Kalin, *Computational evidence for First-passage attribution and regional particle energization in multiscale reconnection*, version 1.0.0, Zenodo (2026), software and data. https://doi.org/10.5281/zenodo.23774456 . Computational snapshot `e3119e6ee98f6d4bfc760a7c851d33f90b3a7d6b`.
 
 [10] T. Kalin, *Computational evidence for First-passage attribution and regional particle energization in multiscale reconnection*, version 1.1.0, Zenodo (2026), software and data. https://doi.org/10.5281/zenodo.23775167 ; https://zenodo.org/records/23775167 . Revised computational snapshot `a8cb56dadaf6fdf6d07ce6aba0d94b9ad291f9d5`.
+
+[11] B. Efron, *Bootstrap Methods: Another Look at the Jackknife*, The Annals of Statistics **7**(1), 1-26 (1979). https://doi.org/10.1214/aos/1176344552 .
+
+[12] T. Kalin, *Computational evidence for First-passage attribution and regional particle energization in multiscale reconnection*, version 1.2.0, Zenodo (2026), software and data. https://doi.org/10.5281/zenodo.23777646 ; https://zenodo.org/records/23777646 . Computational snapshot `83660394cdbd789f297c6da5f18470c00942254a`.

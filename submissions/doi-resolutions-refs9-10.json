@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "assembled_at_utc": "2026-10-29T19:34:58.070650+00:00",
+  "checks_reused_without_archive_redownload": true,
+  "records": [
+    {
+      "reference_number_in_v1_1_manuscript": 9,
+      "doi": "10.5281/zenodo.23774456",
+      "version": "1.0.0",
+      "title": "Computational evidence for First-passage attribution and regional particle energization in multiscale reconnection",
+      "record_url": "https://zenodo.org/records/23774456",
+      "registration_authority": {
+        "url": "https://doi.org/ra/10.5281/zenodo.23774456",
+        "http_status": 200,
+        "checked_at_utc": "2026-10-29T18:33:12.596415+00:00",
+        "sha256": "8c9943ea8c9ddd5e1147d50cc4a62949160c1f4bb2f82ea2b76824fbcdc5308d",
+        "registration_authority_records": [
+          {
+            "DOI": "10.5281/zenodo.23774456",
+            "RA": "DataCite"
+          }
+        ]
+      },
+      "DataCite": {
+        "requested_url": "https://api.datacite.org/dois/10.5281/zenodo.23774456",
+        "checked_at_utc": "2026-10-29T18:26:49.793590+00:00",
+        "http_status": 200,
+        "state": "findable",
+        "registered": "2026-10-29T18:25:23.000Z"
+      },
+      "DOI_resolution": {
+        "requested_url": "https://doi.org/10.5281/zenodo.23774456",
+        "checked_at_utc": "2026-10-29T18:26:52.951000+00:00",
+        "http_status": 200,
+        "final_host": "zenodo.org",
+        "final_path": "/records/23774456"
+      },
+      "original_archive_verification_receipt": "submissions/zenodo-code-v1.0.0.json",
+      "original_archive_verification_receipt_sha256": "84dd6a6f3162e1dea3316c0a073ebf3718bac042a6b7f3b221af97bd5da8da11"
+    },
+    {
+      "reference_number_in_v1_1_manuscript": 10,
+      "doi": "10.5281/zenodo.23775167",
+      "version": "1.1.0",
+      "title": "Computational evidence for First-passage attribution and regional particle energization in multiscale reconnection",
+      "record_url": "https://zenodo.org/records/23775167",
+      "registration_authority": {
+        "url": "https://doi.org/ra/10.5281/zenodo.23775167",
+        "http_status": 200,
+        "checked_at_utc": "2026-10-29T19:34:18.585928+00:00",
+        "bytes": 70,
+        "sha256": "70ce0452c7e3c292b5f31e95e45ee1a4bd27df9edca479cc09174bdf4def5944",
+        "registration_authority_records": [
+          {
+            "DOI": "10.5281/zenodo.23775167",
+            "RA": "DataCite"
+          }
+        ]
+      },
+      "DataCite": {
+        "requested_url": "https://api.datacite.org/dois/10.5281/zenodo.23775167",
+        "checked_at_utc": "2026-10-29T19:12:20.865071+00:00",
+        "http_status": 200,
+        "state": "findable",
+        "registered": "2026-10-29T19:10:40.000Z"
+      },
+      "DOI_resolution": {
+        "requested_url": "https://doi.org/10.5281/zenodo.23775167",
+        "checked_at_utc": "2026-10-29T19:12:22.917383+00:00",
+        "http_status": 200,
+        "final_host": "zenodo.org",
+        "final_path": "/records/23775167"
+      },
+      "original_archive_verification_receipt": "submissions/zenodo-code-v1.1.0.json",
+      "original_archive_verification_receipt_sha256": "853b19e3f10f62ab3fd20703c8f42ded392cd692e56a08aaa2376198f4e92af9"
+    }
+  ],
+  "interpretation": "Both identifiers have positive DataCite registrations and successful doi.org resolution. A Crossref-only not_found result is not evidence of invalidity. The registry/resolver timestamps are the actual archived check times; no new archive download is implied."
+}
