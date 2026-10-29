@@ -68,7 +68,7 @@ assert body.count(heading)==1
 prefix,reference_body=body.split(heading,1)
 paragraphs=[x for x in reference_body.strip().split('\n\n') if x.strip()]
 reference_body='\n\n'.join(r'\begin{samepage}'+'\n'+x+'\n'+r'\end{samepage}' for x in paragraphs)
-body=prefix+heading+'\n\n'+r'\begingroup\small'+'\n'+reference_body+'\n'+r'\endgroup'+'\n'
+body=prefix+r'\clearpage'+'\n'+heading+'\n\n'+r'\begingroup\small'+'\n'+reference_body+'\n'+r'\endgroup'+'\n'
 (PAPER/'latex/body.tex').write_text(body,encoding='utf-8',newline='\n')
 (PAPER/'latex/images').mkdir(exist_ok=True)
 for image in (ROOT/'figures').glob('*.png'):

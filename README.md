@@ -10,6 +10,8 @@ Version **1.1.0** also analyzes every history in the two released multi-particle
 
 Version **1.2.0** validates the complete deposited routine against all 751 selected histories and adds 20,000 paired resampling replicates per band. These conditional diagnostics describe the released records; correlated histories and unknown release selection prevent interpreting them as population confidence intervals. The paper also separates the staging-folder composition effect from attribution differences. A data and provenance request was sent to the corresponding author on 29 October 2026; no reply had been received at release.
 
+Manuscript **1.2.1** implements the four editorial notes attached to the accepted [Publish.fun version 1.2.0](https://publish.fun/papers/PF-261029.000003). It preserves all numerical evidence and mathematical expressions; the software archive remains version 1.2.0. Publication copies and any publisher correction request are tracked separately.
+
 Positive checks confirm the corrected initial field in the posted inputs and reconstruct the published nonideal-work curves with their plotting transformations. The original downstream-activity result is not presented as overturned.
 
 - [Complete paper](paper/manuscript.md) and [typeset PDF](paper/main.pdf).

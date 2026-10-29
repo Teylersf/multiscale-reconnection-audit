@@ -6,7 +6,7 @@ Independent researcher; https://taylorkalin.com
 
 ORCID: 0009-0003-9000-9315; correspondence: teylersf@gmail.com
 
-Version 1.2.0; 29 October 2026
+Version 1.2.1; 29 October 2026
 
 
 ## 1. Introduction
@@ -67,7 +67,7 @@ program that produced v1.
 The frozen inventory contains 182 files. To bound transfer while examining
 the relevant methods, we retrieved and verified the 127 files no larger
 than two megabytes individually. These include the input decks and
-postprocessing needed here. A subsequent revision additionally examines the complete publicly posted
+postprocessing needed here. We also examine the complete publicly posted
 intermediate-energy p008 and high-energy p000 batches, with their paired
 trajectory and region time chunks. These are documented example batches,
 not the entire simulation population or an established probability sample. The project describes its much larger
@@ -415,9 +415,12 @@ $A_p=\gamma_{p,N}-\gamma_{p,0}$. The source first-passage calculation
 preserves the stored float32 values and its native arithmetic; the
 full-history left, right and symmetric calculations subtract and
 accumulate those same stored values in float64. They do not recompute
-the underlying Lorentz factors. On a fixed systematic selection of 32
-histories per staging batch, the streaming first-passage outputs agree
-exactly with the pinned original function. Randomized branch/boundary
+the underlying Lorentz factors. Executing the complete pinned original
+function on all 1,003 released histories gives exact agreement with the
+streaming first-passage outputs for all 751 selected records, as detailed
+in the complete-function validation below. The earlier fixed systematic
+checks on 32 histories per staging batch remain supporting controls.
+Randomized branch/boundary
 checks, four source-linked fixtures and independent small-sequence
 checks additionally test the implementation. The largest source-arithmetic
 closure residual is $3.10\times10^{-6}$; the left and right ledgers have
@@ -721,6 +724,8 @@ The additional complete-function validation and resampling diagnostics are archi
 
 For references [9] and [10], DOI resolution was verified directly on 29 October 2026. The DataCite record for [9] returned HTTP 200 and state `findable` at 18:26:49 UTC; its doi.org link resolved to Zenodo record 23774456 with HTTP 200 at 18:26:52 UTC. Reference [10] returned the same positive DataCite state at 19:12:20 UTC and resolved to record 23775167 at 19:12:22 UTC. The official doi.org registration-authority responses identify DataCite. Primary registry links are https://api.datacite.org/dois/10.5281/zenodo.23774456 and https://api.datacite.org/dois/10.5281/zenodo.23775167 . Timestamped receipts preserve these checks and anonymous archive hashes. Crossref `not_found` is not evidence that a separately verified DataCite DOI is invalid.
 
+Reference [12] was also checked directly on 29 October 2026: its DataCite record returned HTTP 200 with state `findable` at 19:51:22 UTC, and doi.org resolved to Zenodo record 23777646 with HTTP 200 at 19:51:24 UTC. The official registration-authority response confirmed DataCite at 19:52:01 UTC. The primary registry URL is https://api.datacite.org/dois/10.5281/zenodo.23777646 . The timestamped receipt is submissions/zenodo-code-v1.2.0.json.
+
 **Authorship and assistance.** Taylor Kalin is the canonical author and is responsible for this audit and its release. AI tools assisted with source retrieval, mathematical checks, code, internal adversarial review and drafting. These checks are not represented as independent human peer review. Separately authorized agent editions identify their agent byline and retain Taylor Kalin's human-operator and canonical-author credit when a venue requires agent authors.
 
 **Funding and interests.** Taylor Kalin self-funded this study and reports no outside funding. No competing interests have been reported. The original authors, their institutions and the publishers have not endorsed this audit. Original audit text and figures are CC BY 4.0 and original code is MIT licensed. Upstream fixtures and code excerpts retain their CC0 provenance; other attributed excerpts retain their source rights. The original paper, complete source archive and large simulation outputs are linked rather than republished as this author's work.
@@ -731,7 +736,7 @@ For references [9] and [10], DOI resolution was verified directly on 29 October 
 
 The deposited particle-analysis function calculates first-passage phases. For a trajectory that revisits a region, those phases need not identify the locations of its energy gains and losses. An exact counterexample changes the inferred dominant region while preserving total-gain closure, so closure alone cannot validate regional attribution. Four released trajectories reproduce the eight preprint annotations, and three match full histories in the larger released batch. The revised calculation measures the attribution difference on 751 in-band records selected from all 1,003 posted histories.
 
-For the available high-energy subset, the downstream particle mean decreases from 0.500318 to 0.370129 under symmetric full-history attribution, a change of 13.0189 percentage points. Left and right conventions give similar high-band particle means, whereas the intermediate subset retains downstream dominance. The high-band fraction of total net gain decreases from 0.490959 to 0.393724; it was already below one half under first-passage attribution. Thus the two estimands must not be described as undergoing the same ordering change. These are measured paired effects with the available histories, not a uniquely recovered continuous-work partition or a correction to the complete published cohort. The mismatch to the original intermediate-band point and the undocumented batch-release selection keep that population question open.
+For the available high-energy subset, the downstream particle mean decreases from 0.500318 to 0.370129 under symmetric full-history attribution, a change of 13.0189 percentage points. Its paired conditional empirical bootstrap percentile range is [-20.4864, -6.6663] points; unknown release selection and within-run correlation prevent interpreting this range as a population confidence interval. Left and right conventions give similar high-band particle means, whereas the intermediate subset retains downstream dominance. The high-band fraction of total net gain decreases from 0.490959 to 0.393724; it was already below one half under first-passage attribution. Thus the two estimands must not be described as undergoing the same ordering change. These are measured paired effects with the available histories, not a uniquely recovered continuous-work partition or a correction to the complete published cohort. The mismatch to the original intermediate-band point and the undocumented batch-release selection keep that population question open.
 
 Other checks preserve important positive evidence: the posted fields implement the correct initialization, the force-free guide profile is explicit in the input, and the reported nonideal-work curves can be reconstructed after their plotting transformations. The resulting correction is specific to what has been demonstrated. It calls for a more precise regional particle-energy attribution while retaining the physical results that this audit does not overturn.
 

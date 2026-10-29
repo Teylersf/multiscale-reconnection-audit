@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "prepared_at_utc": "2026-10-29T20:15:57.421957+00:00",
+  "accepted_publishfun_version": "1.2.0",
+  "permanent_id": "PF-261029.000003",
+  "editorial_manuscript_version": "1.2.1",
+  "canonical_markdown_sha256": "5560637f8e48586e350d23771b7e8bfff55f25498eee02c174a7cc3ed5d86d1b",
+  "prior_markdown_sha256": "110e1d04e1990b0cd8c060ee3ba1ed91756042f40f75867e94dca8ebff6e7c67",
+  "ordered_math_identical": true,
+  "appendices_and_references_identical": true,
+  "scientific_code_commit": "83660394cdbd789f297c6da5f18470c00942254a",
+  "software_version_unchanged": "1.2.0",
+  "changes": [
+    "Replace the superseded partial-validation sentence with the complete original-function validation.",
+    "Add the already verified dated DOI-resolution record for reference12.",
+    "Include the existing conditional high-band percentile range in abstract and conclusion.",
+    "Replace source-provenance revision-log wording with a direct description."
+  ],
+  "published_copy_update": "Not submitted: official revision API requires revision_requested; post-publication corrections require publisher correspondence."
+}

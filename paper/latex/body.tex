@@ -9,7 +9,7 @@ Independent researcher; \url{https://taylorkalin.com}
 ORCID: 0009-0003-9000-9315; correspondence:
 \href{mailto:teylersf@gmail.com}{\nolinkurl{teylersf@gmail.com}}
 
-Version 1.2.0; 29 October 2026
+Version 1.2.1; 29 October 2026
 
 \subsection{Abstract}\label{abstract}
 
@@ -28,16 +28,20 @@ cuts leaves 667 intermediate and 84 high-energy histories. In the
 available high-energy subset, the downstream particle-mean fraction
 changes from 0.500318 under first-passage attribution to 0.370129 under
 symmetric full-history attribution; left and right conventions give
-0.370742 and 0.369515. Its fraction of total net gain changes from
-0.490959 to 0.393724. Downstream remains dominant in the intermediate
-subset. All comparisons retain signed increments and identical particle
-selections. The batches have undocumented release probabilities and do
-not reproduce the published intermediate-band point; these are measured
-available-sample effects, not a corrected full-population result.
-Discrete endpoint allocations also do not uniquely recover continuous
-electric work. Supporting appendices preserve positive initialization
-and diagnostic-curve checks, distinguish inferred plotting operations
-from source-unit evidence, and print the complete audited routine.
+0.370742 and 0.369515. The paired symmetric particle-mean shift is
+-13.0189 percentage points, with a conditional empirical bootstrap
+percentile range of {[}-20.4864, -6.6663{]} points; this is not a
+population confidence interval. Its fraction of total net gain changes
+from 0.490959 to 0.393724. Downstream remains dominant in the
+intermediate subset. All comparisons retain signed increments and
+identical particle selections. The batches have undocumented release
+probabilities and do not reproduce the published intermediate-band
+point; these are measured available-sample effects, not a corrected
+full-population result. Discrete endpoint allocations also do not
+uniquely recover continuous electric work. Supporting appendices
+preserve positive initialization and diagnostic-curve checks,
+distinguish inferred plotting operations from source-unit evidence, and
+print the complete audited routine.
 
 \subsection{1. Introduction}\label{introduction}
 
@@ -190,19 +194,18 @@ hash-identified snapshot of every program that produced v1.
 The frozen inventory contains 182 files. To bound transfer while
 examining the relevant methods, we retrieved and verified the 127 files
 no larger than two megabytes individually. These include the input decks
-and postprocessing needed here. A subsequent revision additionally
-examines the complete publicly posted intermediate-energy p008 and
-high-energy p000 batches, with their paired trajectory and region time
-chunks. These are documented example batches, not the entire simulation
-population or an established probability sample. The project describes
-its much larger underlying dataset and offers additional data on
-request. Consequently, the audit distinguishes a reproduced calculation
-on available files from a complete rerun of the approximately
-forty-billion-particle simulation. The numeric OSF fixtures are
-preserved under the project's CC0 license; that license does not replace
-independently applicable upstream software licenses. Coordinates derived
-from the preprint's figures are separately attributed under its CC BY
-4.0 terms.
+and postprocessing needed here. We also examine the complete publicly
+posted intermediate-energy p008 and high-energy p000 batches, with their
+paired trajectory and region time chunks. These are documented example
+batches, not the entire simulation population or an established
+probability sample. The project describes its much larger underlying
+dataset and offers additional data on request. Consequently, the audit
+distinguishes a reproduced calculation on available files from a
+complete rerun of the approximately forty-billion-particle simulation.
+The numeric OSF fixtures are preserved under the project's CC0 license;
+that license does not replace independently applicable upstream software
+licenses. Coordinates derived from the preprint's figures are separately
+attributed under its CC BY 4.0 terms.
 
 The manuscript distinguishes three provenance claims. The December 2025
 routine is directly inspectable and explicitly identifies the relevant
@@ -609,14 +612,16 @@ Every comparison uses the same selected IDs and the same denominator
 preserves the stored float32 values and its native arithmetic; the
 full-history left, right and symmetric calculations subtract and
 accumulate those same stored values in float64. They do not recompute
-the underlying Lorentz factors. On a fixed systematic selection of 32
-histories per staging batch, the streaming first-passage outputs agree
-exactly with the pinned original function. Randomized branch/boundary
-checks, four source-linked fixtures and independent small-sequence
-checks additionally test the implementation. The largest
-source-arithmetic closure residual is \(3.10\times10^{-6}\); the left
-and right ledgers have zero closure residual at the reported numerical
-precision.
+the underlying Lorentz factors. Executing the complete pinned original
+function on all 1,003 released histories gives exact agreement with the
+streaming first-passage outputs for all 751 selected records, as
+detailed in the complete-function validation below. The earlier fixed
+systematic checks on 32 histories per staging batch remain supporting
+controls. Randomized branch/boundary checks, four source-linked fixtures
+and independent small-sequence checks additionally test the
+implementation. The largest source-arithmetic closure residual is
+\(3.10\times10^{-6}\); the left and right ledgers have zero closure
+residual at the reported numerical precision.
 
 The example linkage is also directly testable. All 40,764 stored
 \(\gamma,x,z\) and region values of the source's Figs. 9--11 match three
@@ -1111,6 +1116,14 @@ Timestamped receipts preserve these checks and anonymous archive hashes.
 Crossref \nolinkurl{not_found} is not evidence that a separately verified
 DataCite DOI is invalid.
 
+Reference {[}12{]} was also checked directly on 29 October 2026: its
+DataCite record returned HTTP 200 with state \nolinkurl{findable} at
+19:51:22 UTC, and doi.org resolved to Zenodo record 23777646 with HTTP
+200 at 19:51:24 UTC. The official registration-authority response
+confirmed DataCite at 19:52:01 UTC. The primary registry URL is
+\url{https://api.datacite.org/dois/10.5281/zenodo.23777646} . The
+timestamped receipt is submissions/zenodo-code-v1.2.0.json.
+
 \textbf{Authorship and assistance.} Taylor Kalin is the canonical author
 and is responsible for this audit and its release. AI tools assisted
 with source retrieval, mathematical checks, code, internal adversarial
@@ -1148,17 +1161,20 @@ batch. The revised calculation measures the attribution difference on
 
 For the available high-energy subset, the downstream particle mean
 decreases from 0.500318 to 0.370129 under symmetric full-history
-attribution, a change of 13.0189 percentage points. Left and right
-conventions give similar high-band particle means, whereas the
-intermediate subset retains downstream dominance. The high-band fraction
-of total net gain decreases from 0.490959 to 0.393724; it was already
-below one half under first-passage attribution. Thus the two estimands
-must not be described as undergoing the same ordering change. These are
-measured paired effects with the available histories, not a uniquely
-recovered continuous-work partition or a correction to the complete
-published cohort. The mismatch to the original intermediate-band point
-and the undocumented batch-release selection keep that population
-question open.
+attribution, a change of 13.0189 percentage points. Its paired
+conditional empirical bootstrap percentile range is {[}-20.4864,
+-6.6663{]} points; unknown release selection and within-run correlation
+prevent interpreting this range as a population confidence interval.
+Left and right conventions give similar high-band particle means,
+whereas the intermediate subset retains downstream dominance. The
+high-band fraction of total net gain decreases from 0.490959 to
+0.393724; it was already below one half under first-passage attribution.
+Thus the two estimands must not be described as undergoing the same
+ordering change. These are measured paired effects with the available
+histories, not a uniquely recovered continuous-work partition or a
+correction to the complete published cohort. The mismatch to the
+original intermediate-band point and the undocumented batch-release
+selection keep that population question open.
 
 Other checks preserve important positive evidence: the posted fields
 implement the correct initialization, the force-free guide profile is
@@ -1784,6 +1800,7 @@ return ordering are also retained. Printing this later deposited version
 does not establish that these exact source bytes were executed before
 the v1 preprint.
 
+\clearpage
 \subsection{References}\label{references}
 
 \begingroup\small

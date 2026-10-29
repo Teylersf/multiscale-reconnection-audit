@@ -57,9 +57,12 @@ $A_p=\gamma_{p,N}-\gamma_{p,0}$. The source first-passage calculation
 preserves the stored float32 values and its native arithmetic; the
 full-history left, right and symmetric calculations subtract and
 accumulate those same stored values in float64. They do not recompute
-the underlying Lorentz factors. On a fixed systematic selection of 32
-histories per staging batch, the streaming first-passage outputs agree
-exactly with the pinned original function. Randomized branch/boundary
+the underlying Lorentz factors. Executing the complete pinned original
+function on all 1,003 released histories gives exact agreement with the
+streaming first-passage outputs for all 751 selected records, as detailed
+in the complete-function validation below. The earlier fixed systematic
+checks on 32 histories per staging batch remain supporting controls.
+Randomized branch/boundary
 checks, four source-linked fixtures and independent small-sequence
 checks additionally test the implementation. The largest source-arithmetic
 closure residual is $3.10\times10^{-6}$; the left and right ledgers have

@@ -1,8 +1,8 @@
 {
-  "checked_at_utc": "2026-10-29T20:00:53.095518+00:00",
-  "canonical_markdown_sha256": "110e1d04e1990b0cd8c060ee3ba1ed91756042f40f75867e94dca8ebff6e7c67",
-  "submitted_body_sha256": "a7950e8f0b5b7be77d0cd40be31c574f563cd7afe64594732903c642f4cfd2d4",
-  "abstract_sha256": "09b59246451e40c20a5057655d2ded4129d13b193fe74895077e94db00c4b96e",
+  "checked_at_utc": "2026-10-29T20:15:55.063094+00:00",
+  "canonical_markdown_sha256": "5560637f8e48586e350d23771b7e8bfff55f25498eee02c174a7cc3ed5d86d1b",
+  "submitted_body_sha256": "2d79f08d4cae22f328140e6b12fe8c96655bdbe369f81488abfbb6bd2783b7c9",
+  "abstract_sha256": "a86e65cddab44845c211710a6ed8aa9e72d71baf3e9670b4946e9349c736a1b9",
   "transformations": [
     "Remove duplicate body abstract; identical abstract supplied as metadata.",
     "Expand relative figure links to public repository URLs."

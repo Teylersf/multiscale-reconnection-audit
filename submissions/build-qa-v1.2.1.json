@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-29T20:18:52.720601+00:00",
+  "version": "1.2.1",
+  "scope": "Independent final layout review after four editorial clarifications to previously reviewed1.2.0; no numerical recalculation or new claim of human peer review.",
+  "canonical_author": "Taylor Kalin",
+  "title": "First-passage attribution and regional particle energization in multiscale reconnection",
+  "manuscript": {
+    "path": "paper/manuscript.md",
+    "bytes": 89231,
+    "sha256": "5560637f8e48586e350d23771b7e8bfff55f25498eee02c174a7cc3ed5d86d1b"
+  },
+  "PDF": {
+    "path": "paper/main.pdf",
+    "bytes": 520038,
+    "sha256": "ea5e7ea36146255c2cb97e06bd3eb689bc46c573defe315ece2e40520a0c1fd4",
+    "pages": 26
+  },
+  "delta_review": {
+    "compared_against": "Git tagv1.2.0 paper/manuscript.md",
+    "changes": [
+      "Version1.2.1 label",
+      "Conditional high-band paired bootstrap range added to abstract and conclusion, with population-CI exclusion",
+      "Section3 removes revision-log framing",
+      "Section5 states completed full-source validation before retaining earlier32-per-batch controls",
+      "Section7 gives dated direct DataCite/DOI evidence for reference12",
+      "Explicit page break before References"
+    ],
+    "new_numeric_analysis": false
+  },
+  "visual_review": {
+    "all_pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "method": "All26 Poppler70dpi pages inspected in four-page contact sheets; changed paragraphs and complete reference page read visually. Earlier25-page1.2.0 was already fully reviewed.",
+    "clipped_text_or_math": false,
+    "missing_glyphs_observed": false,
+    "table_layout": "Four tables stay within margins; bootstrap table readable.",
+    "figures": "Both main figures and captions present without clipping.",
+    "headings": "No material orphaned headings observed.",
+    "source_listing": "Complete attributed listing reaches line403 and explanatory paragraph on page25.",
+    "references": "All12 references fit on dedicated page26; no blank reference lead-in or clipped final entry.",
+    "remaining_layout_limit": "Figure1 occupies a float page with intentional surrounding whitespace; source listing is smaller monospace text."
+  },
+  "technical_checks": {
+    "all_pages_extract_nonempty": true,
+    "author_metadata_Taylor_Kalin": true,
+    "compile_log_warnings": [],
+    "compile_log_sha256": "0f10c90489fabc85b01cf404cea35d843edc5d6b77592a38f76b61fe5c0b8c1f",
+    "observed_replacement_characters": 0
+  },
+  "result": "pass",
+  "public_safe": true
+}
