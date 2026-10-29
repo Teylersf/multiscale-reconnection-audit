@@ -15,21 +15,30 @@ OUT = ROOT / 'submissions'
 OUT.mkdir(exist_ok=True)
 body = (ROOT / 'paper/manuscript.md').read_text(encoding='utf-8')
 title = body.splitlines()[0].removeprefix('# ')
+version = re.search(r'^Version ([0-9.]+);', body, re.M).group(1)
 before, tail = body.split('## Abstract\n', 1)
 abstract, after = tail.split('## 1. Introduction\n', 1)
 abstract = abstract.strip()
 repo = 'https://github.com/Teylersf/multiscale-reconnection-audit'
+snapshot_file = OUT / 'computational-snapshot.json'
+snapshot = json.loads(snapshot_file.read_text(encoding='utf-8')) if snapshot_file.exists() else {
+    'manuscript_version': '1.0.0',
+    'scientific_code_commit': 'e3119e6ee98f6d4bfc760a7c851d33f90b3a7d6b',
+    'code_doi': '10.5281/zenodo.23774456'}
+if snapshot['manuscript_version'] != version:
+    raise ValueError('A matching frozen computational-snapshot.json is required for this revision.')
 adapted = re.sub(r'^## Abstract\n\n.+?(?=\n## )', '', body, count=1, flags=re.M|re.S)
-adapted = adapted.replace('../figures/', repo + '/raw/main/figures/')
+adapted = adapted.replace('../figures/', repo + '/raw/' + snapshot['scientific_code_commit'] + '/figures/')
 assert adapted.count('## Abstract') == 0
 assert body.count('## Abstract\n') == 1
 assert adapted.count('## References\n') == 1
-assert len(re.findall(r'^\[\d+\]', body, re.M)) == 9
+reference_count = len(re.findall(r'^\[\d+\]', body, re.M))
+assert reference_count >= 9
 (OUT / 'manuscript.md').write_text(adapted, encoding='utf-8', newline='\n')
 metadata = dict(title=title, abstract=abstract, author='Taylor Kalin',
-    orcid='0009-0003-9000-9315', version='1.0.0',
-    scientific_code_commit='e3119e6ee98f6d4bfc760a7c851d33f90b3a7d6b',
-    code_doi='10.5281/zenodo.23774456',
+    orcid='0009-0003-9000-9315', version=version,
+    scientific_code_commit=snapshot['scientific_code_commit'],
+    code_doi=snapshot['code_doi'],
     keywords=['magnetic reconnection', 'particle energization', 'first passage',
         'regional attribution', 'reproducibility', 'particle-in-cell'],
     repository=repo)
@@ -41,7 +50,7 @@ receipt = dict(checked_at_utc=datetime.now(timezone.utc).isoformat(),
     transformations=['Remove duplicate body abstract; identical abstract supplied as metadata.',
         'Expand relative figure links to public repository URLs.'],
     all_scientific_body_and_references_preserved=True,
-    canonical_abstract_retained=True, reference_count=9)
+    canonical_abstract_retained=True, reference_count=reference_count)
 (OUT / 'publishfun-format-adapter.json').write_text(json.dumps(receipt, indent=2)+'\n', encoding='utf-8')
 print({'title': title, 'abstract_words': len(abstract.split()),
-       'body_characters': len(adapted), 'references': 9})
+       'body_characters': len(adapted), 'references': reference_count})

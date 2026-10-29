@@ -1,5 +1,13 @@
 ## A reproducible population reanalysis
 
+Section 5 executes the paired ledger comparison on all available posted
+histories and reports both estimands after common band selection. The
+remaining extension is to a completely identified historical Figure 6
+cohort, with its run, endpoint, sampling design and physical weights. The
+following protocol specifies that extension and the separate validation
+of continuous electric work; it is not presented as an additional
+population calculation already completed here.
+
 The demonstrated method discrepancy can be addressed without changing the
 underlying particle-in-cell calculation. The primary empirical question is how
 much the chosen regional statistic changes when the same cohort is analyzed

@@ -1,0 +1,11 @@
+{
+  "manuscript_version": "1.1.0",
+  "scientific_code_commit": "a8cb56dadaf6fdf6d07ce6aba0d94b9ad291f9d5",
+  "code_doi": "10.5281/zenodo.23775167",
+  "archive_file": "multiscale-reconnection-audit-code-v1.1.0.zip",
+  "archive_bytes": 2702929,
+  "archive_sha256": "82835a9d7e53c929a690cc5ccc30f3cfdc0efa75ea23344c9f6682ad737b421e",
+  "baseline_code_commit": "e3119e6ee98f6d4bfc760a7c851d33f90b3a7d6b",
+  "baseline_code_doi": "10.5281/zenodo.23774456",
+  "raw_batch_bytes_not_repackaged": 3107362288
+}

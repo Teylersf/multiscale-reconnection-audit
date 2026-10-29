@@ -11,6 +11,16 @@ by first entry into the primary sheet and the first subsequent downstream
 entry. This distinction can matter for a particle that returns to an earlier
 region or visits downstream before first entering the sheet.
 
+The relevant regional interpretation is stated in the source's particle-
+acceleration paragraph on page 4 and its Fig. 6 caption on page 5. The
+Fig. 8 caption on page 9 also connects the panel annotations to the
+time-dependent region labels. We found no explicit first-passage formula
+in that inspected text. These locators support the stated distinction;
+they do not establish an author's unexpressed intent. The deposited
+script's header identifies Fig. 6 and the supplemental trajectories as its
+purpose, and its L320 driver loads the larger intermediate batch set before
+printing particle-mean downstream and pooled sheet-plus-phase fractions.
+
 The audit pins the December 6, 2025 version-1 source file, whose SHA-256 is
 `3f93e1685dd9664e279f8b14535d4ebc6ba2946442e4831f4eaf24db315d61ba`,
 and preserves its exact lines 344-403. The function is attributed to Alexander
@@ -18,9 +28,15 @@ Velberg and obtained from the CC0 OSF project, DOI
 https://doi.org/10.17605/OSF.IO/EPWTU . Four selected deposited trajectories
 provide a direct bridge to the preprint: the function reproduces every CS/DS
 value printed in its Figs.8-11 to the reported two decimal places. The source
-and data postdate the preprint, so this correspondence is evidence for the
+and data versions were deposited after the preprint, so this correspondence is evidence for the
 illustrative calculations rather than a hash-identified historical execution of
 the entire Fig.6 cohort.
+
+The live file history lists only the December version. No earlier source
+revision, execution receipt or correspondence has established that these
+exact bytes generated the November preprint. The claim audited here is
+therefore the semantics of the posted routine, supported by the separate
+annotation agreement and the matched released-batch calculation below.
 
 ### What the deposited function computes
 

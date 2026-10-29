@@ -6,7 +6,7 @@ Independent researcher; https://taylorkalin.com
 
 ORCID: 0009-0003-9000-9315; correspondence: teylersf@gmail.com
 
-Version 1.0.0; 29 October 2026
+Version 1.1.0; 29 October 2026
 
 
 ## 1. Introduction
@@ -19,9 +19,9 @@ The paper's region decomposition is dynamic. Four initial particle tags identify
 
 For a particle with Lorentz factor $\gamma$, the laboratory kinetic-energy change is proportional to the integral of electric work. Its partition into regions depends on the region indicator at the time of that work. In the deposited implementation [2], however, the regional attribution is calculated from the Lorentz factors at first sheet entry, first subsequent downstream entry and the final sample. Such endpoint differences automatically close the total budget. They do not retain the locations of later returns. The distinction is directly testable without rerunning a large particle-in-cell simulation.
 
-Our main result is a source-specific method discrepancy, supported at three levels. First, inspection of the pinned routine identifies its chronological partition. Second, controlled traces give exact counterexamples, including one inside the source's reported intermediate energy band, for which energy-changing intervals have fixed region labels and all transition increments vanish. Third, the four released illustrative trajectories reproduce the eight energy annotations printed in the preprint. We then calculate full-history discrete alternatives and their dependence on endpoint assignment. These alternatives are sampling conventions, not uniquely established continuous-time energy budgets.
+Our main result is a source-specific method discrepancy, supported at four levels. First, inspection of the pinned routine identifies its chronological partition. Second, controlled traces give exact counterexamples, including one inside the source's reported intermediate energy band, for which energy-changing intervals have fixed region labels and all transition increments vanish. Third, the four released illustrative trajectories reproduce the eight energy annotations printed in the preprint. Fourth, a paired reanalysis of every history in the two released batches measures the difference between first-passage and full-history discrete alternatives under both averaging conventions. Three illustrations exactly match full released-batch histories, strengthening that example-level provenance. The discrete alternatives remain sampling conventions, not uniquely established continuous-time energy budgets.
 
-The contribution is deliberately bounded. We do not infer the population-wide correction from four author-selected examples. Nor do we treat a discrepancy in a particle diagnostic as a disproof of the separately measured downstream nonideal-work activity. We reproduce that diagnostic's plotted curves as a positive check. Likewise, a coordinate error in the printed initial field is checked against the posted initialization, which implements the divergence-free expression. The audit separates a demonstrated mathematical or implementation statement from an unmeasured effect on a physical conclusion.
+The contribution is deliberately bounded. We do not infer a population-wide correction from the released convenience batches or the four author-selected illustrations. The available intermediate-band first-passage mean does not reproduce the original Figure 6 point, which directly cautions against identifying the public union with the full historical cohort. Nor do we treat a discrepancy in a particle diagnostic as a disproof of the separately measured downstream nonideal-work activity. Appendices retain its positive curve reconstruction and the initialization checks. The main text leads with the paired empirical effect and separates that measured result from an unmeasured change to the complete published population.
 
 ## 2. Related work and diagnostic context
 
@@ -33,7 +33,7 @@ The electron-frame measure introduced by Zenitani et al. [3] is a Lorentz-invari
 
 The initial island field is described in [1] as a force-free modification of the Fadeev configuration [4]. Elementary divergence and curl identities provide a direct consistency check, independent of numerical evolution. They also make it possible to identify a printing discrepancy while confirming the currently posted input expression. We do not claim novelty for these field identities, for telescoping sums, or for the covariance identity relating two averaging conventions. The new application is the audited relationship among the specific deposited routine, the reported illustrative values and a time-local regional-work interpretation.
 
-## 3. Source evidence and positive reconstruction checks
+## 3. Source provenance and released particle data
 
 The audit fixes its scientific target to the eleven-page arXiv:2511.15988v1
 preprint by Velberg and collaborators. The supplied PDF is byte-identical to
@@ -67,8 +67,10 @@ program that produced v1.
 The frozen inventory contains 182 files. To bound transfer while examining
 the relevant methods, we retrieved and verified the 127 files no larger
 than two megabytes individually. These include the input decks and
-postprocessing needed here. Large field outputs and the full particle
-population were not retrieved. The project describes its much larger
+postprocessing needed here. A subsequent revision additionally examines the complete publicly posted
+intermediate-energy p008 and high-energy p000 batches, with their paired
+trajectory and region time chunks. These are documented example batches,
+not the entire simulation population or an established probability sample. The project describes its much larger
 underlying dataset and offers additional data on request. Consequently,
 the audit distinguishes a reproduced calculation on available files from
 a complete rerun of the approximately forty-billion-particle simulation.
@@ -77,117 +79,26 @@ that license does not replace independently applicable upstream software
 licenses. Coordinates derived from the preprint's figures are separately
 attributed under its CC BY 4.0 terms.
 
-The input evidence resolves two apparent physical inconsistencies in a
-favorable direction. The printed Eq. (1) gives
-$B_x=B_0\sinh(x/L)/F(x,z)$ while its denominator contains
-$\cosh(z/L)$. The deposited island deck instead initializes
-$B_x=B_0\sinh(z/L)/F(x,z)$, with the corresponding printed expressions
-for the other components. The corrected field is the appropriate
-solenoidal equilibrium. The source therefore supports a coordinate typo
-in the displayed formula rather than evidence that the simulation used
-the inconsistent field. An example deck is not, by itself, a certificate
-of the historical executable, but it is direct implementation evidence
-that must constrain the criticism.
 
-Likewise, reading the force-free-current-sheet footnote as literally
-replacing its transverse equilibrium field by a constant guide field would
-leave a pressure-balance problem for the stated uniform plasma. The
-deposited comparison deck uses $\epsilon=0$, $L/d_e=6$ and $b_g=1$,
-with
 
-$$
-B_x=B_0\tanh(z/L),\qquad
-B_y=B_0\sqrt{\operatorname{sech}^2(z/L)+b_g^2},
-\qquad B_z=0.
-$$
+The manuscript distinguishes three provenance claims. The December 2025
+routine is directly inspectable and explicitly identifies the relevant
+particle-energy figure in its comments. Its outputs on the four released
+illustrations reproduce the eight v1 annotations. Neither this agreement nor
+the later figure-generation comments establish a hash-identified November
+2025 executable or the exact Figure 6 cohort. The new batch comparison holds
+each released history fixed while changing only the attribution ledger; it
+does not silently identify those batches with the complete v1 population.
 
-Its field magnitude satisfies $B_x^2+B_y^2=B_0^2(1+b_g^2)$.
-Thus the implementation retains the force-free profile while adding the
-external guide contribution in quadrature. The footnote should state this
-profile explicitly, but its shorthand does not substantiate an invalid
-force-free comparison. The information file also gives
-$\Delta x/d_e=0.2454369$ for the large run, consistent with the stated
-approximately four cells per skin depth rather than an exact grid-count
-contradiction.
-
-The proxy arrays require the same care. Their raw L320 time series has
-122 entries ending at 23.16347, while its raw cumulative total reaches
-0.357089. Directly comparing those raw numbers with the preprint axes or
-with global magnetic-energy loss would suggest a large discrepancy.
-We therefore extracted numerical line coordinates from the original
-vector figures in the official v1 source archive and calibrated their
-axes. This checks the displayed data rather than guessing the missing
-plotting convention.
-
-All five cumulative L320 curves in preprint Fig. 3 are reproduced by
-the first 116 deposited samples using
-
-$$
-\left(t/t_A\right)_{\rm display}
-=t_{\rm raw}/5,\qquad
-\mathcal D_{i,\rm display}
-=\mathcal D_{i,\rm raw}/25.
-$$
-
-The island curve uses the sum of the two deposited island arrays.
-At the common endpoint the reconstructed total is 0.0139557484 at
-$t/t_A=4.40297382$, matching the published curve rather than the raw
-0.357089 endpoint outside that window. Across the five cumulative
-paths and the rate reconstruction below, the largest coordinate
-residual is 0.000555 PDF point, smaller than the declared 0.002-point
-rounding tolerance. The original artwork is not redistributed; the
-portable artifact preserves attributed numeric coordinates and their
-source hashes.
-
-The instantaneous and cumulative files are also coherent. Their stored
-increments obey
-$\Delta\mathcal D_{\rm raw}=4000\,D_{\rm raw}^{\rm inst}$
-with maximum absolute residual $1.483\times10^{-9}$, consistent with
-float32 storage of the instantaneous array. The paper's relativistic
-Alfvén definition gives $t_A=4178.993735$ in plasma-time units for this
-case. Taking the first 115 instantaneous samples, applying a Gaussian
-filter of width 1.5 samples with half-sample symmetric boundary handling,
-and multiplying by $t_A$ reproduces the Fig. 4 blue rate path. The
-corresponding times are $t_{\rm raw}[1{:}116]/5$.
-This is an independently verified display reconstruction; it does not
-claim recovery of an unavailable historical plotting revision.
-
-The common cumulative scale factor cancels in every regional share.
-At the displayed endpoint the downstream fraction is 0.664435 and the
-primary-sheet fraction 0.266235; the islands and top/bottom contribute
-0.0586225 and 0.0107092. Those values are unchanged by the factor of
-25. Thus the deposited curves positively preserve the preprint's
-downstream-dominant ordering of this proxy. They provide no basis for
-alleging that its published integral is too large by that factor.
-The independently generated reconstruction figure and executable check
-make this positive result reviewable.
-
-The global-energy file supplies a bounded cross-check, not an identity
-between the proxy and magnetic-energy conversion. Its 2618 rows contain
-102 repeated restart steps. Keeping either the first or last value at
-each recorded step gives identical data at the reported precision and
-2516 uniformly spaced unique records. Matching the L320 timing
-conditionally, the endpoint of the published window gives an
-electromagnetic-energy loss of approximately $0.020190\,M_0$ and a
-rescaled $\mathbf J\cdot\mathbf E$ integral of $0.020792\,M_0$. These comparable values involve
-different averaging and output cadences and do not prove complete run
-identity or exact energy closure. The same conditional comparison gives a
-particle kinetic-energy gain of $0.022510\,M_0$ and a total recorded-energy
-change of $+0.002320\,M_0$. We report that residual without diagnosing its
-cause or claiming complete conservation from the comparison. The diagnostic spacing inferred from
-409 simulation steps, five output intervals and the recorded timestep
-is 159.70949 plasma-time units; the displayed convention uses the
-nominal value 160, a 0.1819% difference. We record that distinction
-without converting it into an unsupported scientific-error claim.
-
-Finally, this successful reconstruction does not identify
-$\int D_e\,dV\,dt$ with a magnetic-energy decrease or particle-energy
-gain. The electron-frame quantity is a useful proxy whose relationship
-to those budgets requires the appropriate work and transport terms.
-The narrower diagnostic-interpretation question remains legitimate,
-as do the separately tested particle-attribution questions. The
-published proxy normalization, however, is consistent with the
-available source arrays after their explicit display transformations.
+The source and software DOIs are registered by DataCite. Public DataCite
+metadata, the doi.org registration-authority service and anonymous downloads
+were checked directly; absence from a Crossref lookup is not absence from
+the DOI system. Direct source access is https://osf.io/epwtu/ and the original
+software record is https://zenodo.org/records/23774456 . Public verification
+receipts preserve the registry URLs, metadata and downloaded-file checksums.
+The full pinned routine is printed in Appendix D. Positive field and proxy
+checks are retained in Appendices B and C so they remain independently
+reviewable without displacing the particle-attribution result.
 
 ## 4. First-passage attribution and recorded region histories
 
@@ -202,6 +113,16 @@ by first entry into the primary sheet and the first subsequent downstream
 entry. This distinction can matter for a particle that returns to an earlier
 region or visits downstream before first entering the sheet.
 
+The relevant regional interpretation is stated in the source's particle-
+acceleration paragraph on page 4 and its Fig. 6 caption on page 5. The
+Fig. 8 caption on page 9 also connects the panel annotations to the
+time-dependent region labels. We found no explicit first-passage formula
+in that inspected text. These locators support the stated distinction;
+they do not establish an author's unexpressed intent. The deposited
+script's header identifies Fig. 6 and the supplemental trajectories as its
+purpose, and its L320 driver loads the larger intermediate batch set before
+printing particle-mean downstream and pooled sheet-plus-phase fractions.
+
 The audit pins the December 6, 2025 version-1 source file, whose SHA-256 is
 `3f93e1685dd9664e279f8b14535d4ebc6ba2946442e4831f4eaf24db315d61ba`,
 and preserves its exact lines 344-403. The function is attributed to Alexander
@@ -209,9 +130,15 @@ Velberg and obtained from the CC0 OSF project, DOI
 https://doi.org/10.17605/OSF.IO/EPWTU . Four selected deposited trajectories
 provide a direct bridge to the preprint: the function reproduces every CS/DS
 value printed in its Figs.8-11 to the reported two decimal places. The source
-and data postdate the preprint, so this correspondence is evidence for the
+and data versions were deposited after the preprint, so this correspondence is evidence for the
 illustrative calculations rather than a hash-identified historical execution of
 the entire Fig.6 cohort.
+
+The live file history lists only the December version. No earlier source
+revision, execution receipt or correspondence has established that these
+exact bytes generated the November preprint. The claim audited here is
+therefore the semantics of the posted routine, supported by the separate
+annotation agreement and the matched released-batch calculation below.
 
 ### What the deposited function computes
 
@@ -383,7 +310,7 @@ resolved continuous channel partition. The examples were selected by the
 authors for illustration. They neither represent an unbiased cohort sample nor
 determine the size or sign of a change to the published population mean.
 
-![Synthetic counterexample and four selected deposited histories. Panel (a) shows an intermediate-band return to the sheet with zero increment at every label transition. Panel (b) compares the same trace's first-passage and full-history allocations; both conserve total net gain. Panel (c) shows downstream net gain divided by total net gain for the four original examples. Left- and right-endpoint markers are alternative sampled conventions, not confidence intervals, and their connecting segments are not certified continuous-work bounds.](https://github.com/Teylersf/multiscale-reconnection-audit/raw/main/figures/first-passage-attribution.png)
+![Synthetic counterexample and four selected deposited histories. Panel (a) shows an intermediate-band return to the sheet with zero increment at every label transition. Panel (b) compares the same trace's first-passage and full-history allocations; both conserve total net gain. Panel (c) shows downstream net gain divided by total net gain for the four original examples. Left- and right-endpoint markers are alternative sampled conventions, not confidence intervals, and their connecting segments are not certified continuous-work bounds.](https://github.com/Teylersf/multiscale-reconnection-audit/raw/a8cb56dadaf6fdf6d07ce6aba0d94b9ad291f9d5/figures/first-passage-attribution.png)
 
 ### Particle-mean and energy-weighted fractions
 
@@ -429,135 +356,163 @@ sheet dominance. The current evidence does not quantify the full-cohort change,
 establish a sign for that change, overturn the paper's main downstream trend,
 or certify any uniquely corrected continuous physical partition.
 
-## 5. Ancillary source and diagnostic checks
+## 5. Matched attribution on the released particle batches
 
-These checks separate local source-description issues from the regional
-attribution finding. They do not establish an erroneous VPIC evolution.
+### Available cohort and paired analysis
 
-### Printed equilibrium and the correctly posted field
+The public deposit permits a larger empirical comparison than the four
+illustrative traces. We retrieved all 32 files in its two released
+trajectory batches, verifying each file's source SHA256 and byte count
+before starting the next transfer. These comprise 517 histories in
+`inter_energy/p008` and 486 in `high_energy/p000`, each with 40,764 saved
+samples. The batches have stable, unique integer tracer IDs in the same
+order across all eight time chunks, and their ID sets are disjoint.
+The 17-channel tracer arrays have shape `(17, time, particle)`; the
+separate region arrays have shape `(time, particle)`. Their region
+values are integer labels 1--5 stored in float64 arrays. The ID channel
+is not a charge or statistical weight.
 
-Equation (1) of the preprint [1] prints
-$B_x=B_0\sinh(x/L)/F$, while
-$F=\cosh(z/L)+\epsilon\cos(x/L)$ and
-$B_z=B_0\epsilon\sin(x/L)/F$. Direct differentiation gives
+We concatenate the individual histories before applying the source's
+strict final-$\gamma$ cuts, as its analysis driver does. The folder
+names are staging groups, not the final physical energy bands. Of the
+1,003 released histories, 667 satisfy $5.77<\gamma_N<16.40$ and 84 satisfy
+$\gamma_N>16.40$; the remaining 252 lie below the lower cutoff. None
+equals either boundary. The intermediate staging folder contributes
+265 intermediate-band histories and 252 exclusions; the high staging
+folder contributes 402 intermediate-band histories and all 84 high-band
+histories. Folder averages are not averaged together.
 
-$$
-\frac{L}{B_0}\nabla\cdot\mathbf B
-=\frac{\cosh(x/L)}F+
-\frac{\epsilon\sin(x/L)[\sinh(x/L)-\sinh(z/L)]}{F^2}.
-$$
+The primary weights are explicitly unit empirical weights. The example
+island deck assigns the same physical macro-particle `weight = Np/Ne`
+to all tagged electron species, so those weights would cancel in the
+within-batch fractions under that posted setup. Neither this fact nor
+the filename batch indices establish archive inclusion probabilities.
+The deposited driver loads intermediate batches 0--14 and high batch 0;
+only intermediate batch 8 is publicly provided. The released union is
+therefore an available subcohort, not an asserted probability sample or
+a reconstruction of the entire Fig. 6 population. It contains
+all eight time chunks of the released high staging `p000` selected by
+that posted driver. Its completeness relative to the historical
+high-energy cohort is not established.
 
-At the origin this is $1/(1+\epsilon)=5/7$ for $\epsilon=0.4$, so the printed
-field is not solenoidal. Replacing the numerator by $\sinh(z/L)$ restores
-the intended force-free modification of the Fadeev geometry [1,4]. In fact, with
-$A_y=-B_0L\log F$,
+Every comparison uses the same selected IDs and the same denominator
+$A_p=\gamma_{p,N}-\gamma_{p,0}$. The source first-passage calculation
+preserves the stored float32 values and its native arithmetic; the
+full-history left, right and symmetric calculations subtract and
+accumulate those same stored values in float64. They do not recompute
+the underlying Lorentz factors. On a fixed systematic selection of 32
+histories per staging batch, the streaming first-passage outputs agree
+exactly with the pinned original function. Randomized branch/boundary
+checks, four source-linked fixtures and independent small-sequence
+checks additionally test the implementation. The largest source-arithmetic
+closure residual is $3.10\times10^{-6}$; the left and right ledgers have
+zero closure residual at the reported numerical precision.
 
-$$
-B_x=-\partial_zA_y,\qquad B_z=\partial_xA_y,\qquad
-B_y=\frac{B_0\sqrt{1-\epsilon^2}}F,
-\qquad
-\nabla\times\mathbf B=
-\frac{\sqrt{1-\epsilon^2}}{LF}\mathbf B.
-$$
+The example linkage is also directly testable. All 40,764
+stored $\gamma,x,z$ and region values of the source's Figs. 9--11 match
+three columns of the high staging batch exactly, including their
+canonical-array digests. The Fig. 8 history was not found in either
+released batch. This ties the available files to three published
+examples; it does not identify all the historical plotting inputs.
+The arrays contain no timestamp channel. Filename ordering follows the
+posted loader, rather than independently verified physical time vectors.
 
-The first two identities make the divergence zero; differentiating $B_y$
-and the in-plane components gives the last identity, so
-$(\nabla\times\mathbf B)\times\mathbf B=0$.
-Force-free does not imply constant $B^2$ for this curved equilibrium:
-$B^2/B_0^2=[\cosh(z/L)-\epsilon\cos(x/L)]/F$.
+### Paired regional fractions and energy shares
 
-Both currently deposited example decks [2] use the corrected $z$ numerator
-for their unperturbed base field. The coalescence initialization also adds the
-documented triggering perturbation; the equilibrium identities above refer to
-the base field, not to that intentionally perturbed state.
-Their common guide-field prescription is
+For each convention we report both the mean particle fraction
+$\langle G_{p,DS}/A_p\rangle$ and the fraction of the selected histories'
+total net gain $\sum_pG_{p,DS}/\sum_pA_p$. All 751 selected histories
+have positive, finite, nonzero $A_p$; no denominator filter is active.
+Signed regional terms are retained. The JSON also records the original
+source's unfiltered denominator convention, in which three
+float32-derived phase terms stored in float64 arrays are summed; its small rounding differences do not
+change the table at six decimals.
 
-$$
-B_y=B_0\sqrt{(1-\epsilon^2)/F^2+g^2}.
-$$
+| Available band | Convention | Mean particle DS fraction | DS share of total net gain |
+|---|---|---:|---:|
+| Intermediate ($n=667$) | First passage | 0.722947 | 0.679606 |
+| Intermediate ($n=667$) | Left endpoint | 0.652728 | 0.597338 |
+| Intermediate ($n=667$) | Symmetric | 0.690281 | 0.622373 |
+| Intermediate ($n=667$) | Right endpoint | 0.727834 | 0.647409 |
+| High ($n=84$) | First passage | 0.500318 | 0.490959 |
+| High ($n=84$) | Left endpoint | 0.370742 | 0.377414 |
+| High ($n=84$) | Symmetric | 0.370129 | 0.393724 |
+| High ($n=84$) | Right endpoint | 0.369515 | 0.410033 |
 
-The coalescence example has $g=0$. The force-free current-sheet example has
-$\epsilon=0$ and $g=1$, hence
-$B_y=B_0\sqrt{\operatorname{sech}^2(z/L)+1}$.
-This is genuinely force-free with $B_x=B_0\tanh(z/L)$; its total $B^2$ is
-$2B_0^2$. The preprint's footnote [32] describes replacing the out-of-plane
-field by an external guide. Read literally as a *uniform* replacement,
-$B_y=gB_0$, it would instead give
+![Matched downstream fractions in the pooled available histories. The two curves compare a particle mean and a ratio of total signed gains on identical selected IDs. The four categorical positions are distinct attribution conventions; the connecting lines do not describe a time evolution. Panel ordinate scales differ. Unit empirical weights are used. There are no population confidence intervals, and endpoint sensitivity is not a continuous-work uncertainty bound.](https://github.com/Teylersf/multiscale-reconnection-audit/raw/a8cb56dadaf6fdf6d07ce6aba0d94b9ad291f9d5/figures/public-batch-comparison.png)
 
-$$
-(\nabla\times\mathbf B)\times\mathbf B
-=-\frac{B_0^2}{L}\operatorname{sech}^2(z/L)
-\tanh(z/L)\,\hat{\mathbf z},
-$$
+For the available intermediate histories, downstream remains larger
+than its signed non-downstream complement under every displayed
+convention. The empirical changes are nevertheless material: the mean
+fraction moves from 0.722947 to 0.652728 under the left rule, while the
+right rule gives 0.727834. Thus even the sign of the first-passage versus
+local difference depends on the declared sampling convention here.
 
-which is nonzero. The posted profile resolves that description; it provides
-a positive code check rather than evidence of a force-free implementation
-failure. Present deposited examples and metadata do not independently identify
-the exact historical binary and inputs for every reported run.
+For the 84 available high-band histories, the first-passage particle
+mean is only just above one half; all three full-history endpoint
+conventions give approximately 0.37. The aggregate energy-share
+estimand is already below one half for first passage, and ranges from
+0.377414 to 0.410033 for the local conventions. The difference between
+the two estimands is therefore consequential even before attribution
+is changed. These are measured available-subcohort results, not a
+claim that the preprint's full-cohort ordering has been reversed.
 
-### Spectral caption
+The available intermediate first-passage mean, 0.722947, does not
+reproduce the preprint's displayed $L/d_e=320$ intermediate point
+(approximately 0.681). The available high-band first-passage mean
+agrees with the displayed high-band point at three decimals (0.500),
+which is useful consistency evidence but does not identify an exact
+historical cohort. We therefore distinguish the measured available
+union from a complete reconstruction of Fig. 6.
 
-The body and inset of Fig. 5 in [1] specify a power-law index near 3.3, while
-the caption specifies 3. The caption should identify the plotted guide
-consistently. This local discrepancy does not establish a different fitted
-exponent, invalidate the ankle, or reproduce the spectral fitting procedure.
+The full-history calculation retains IS1, IS2, top/bottom, downstream
+and primary sheet separately. Its actual CS+IS1+IS2 pool excludes
+top/bottom. The latter has a small signed intermediate-band mean
+fraction, from $-4.77\times10^{-5}$ for the left rule to
+$5.95\times10^{-5}$ for the right rule, and zero in the available high
+band. The separately reported all-non-downstream complement includes
+top/bottom. Neither pool is silently identified with the source's
+CS+chronological-residual phase quantity.
 
-### Electron-frame nonideal work and laboratory energy
+### Returns, signed increments and limits
 
-The electron-frame measure used in [1] is the established relativistic
-nonideal-work diagnostic [3]. Once the physical electron flow is specified,
-$D_e$ is Lorentz invariant; it should not be described as observer-frame
-dependent. Its relation to the laboratory work rate is the standard identity,
-in dimensional Gaussian units,
+Among the selected histories, 187 of 667 intermediate particles and
+40 of 84 high-band particles visit the primary sheet after their first
+downstream sample following first sheet entry. There are respectively
+743 and 89 subsequent sheet-entry events. The total numbers of recorded
+region transitions are 51,156 and 6,976, and the sums of absolute net
+increments on label-changing intervals are 10,974.343544 and
+2,264.209734. These are discrete transition diagnostics, not bounds on
+unresolved continuous work.
 
-$$
-D_e=\gamma_e\left[
-\mathbf J\cdot\left(\mathbf E+
-\frac{\mathbf V_e\times\mathbf B}{c}\right)
--\rho_c\mathbf V_e\cdot\mathbf E\right],
-\qquad
-\mathbf J\cdot\mathbf E=
-\frac{D_e}{\gamma_e}+
-\frac{\mathbf V_e\cdot(\mathbf J\times\mathbf B)}c
-+\rho_c\mathbf V_e\cdot\mathbf E.
-$$
+Negative regional net gains are not discarded: the left rule gives
+79 intermediate and 18 high histories with negative downstream net
+gain. Fractions above one also occur because a different region can
+supply a loss. Both features are compatible with total-gain closure;
+clipping them would change the estimands. Per-particle arrays, gross
+positive/negative recorded increments and all per-folder subsets are
+retained in the accompanying numeric outputs.
 
-The second equality follows by the scalar triple-product identity. It is not
-a new dissipation law. Poynting's theorem instead gives
+This comparison quantifies the attribution difference on every released
+history that meets the source cuts, rather than on a newly selected
+illustrative set. The omitted intermediate batches, uncertain archive
+selection, coarse region sampling and absent timestamps still prevent
+a certified full-population correction or a unique continuous-work
+partition. A physical convergence study requires more information than
+the small endpoint-convention differences in one band. The repository
+provides an explicit public fetch command, the 32-file hash inventory,
+a memory-bounded analyzer and compact NPZ/CSV results; the 3.11 GB raw
+files remain outside the code archive.
 
-$$
-\partial_t\frac{E^2+B^2}{8\pi}
-+\nabla\cdot\frac{c\mathbf E\times\mathbf B}{4\pi}
-=-\mathbf J\cdot\mathbf E.
-$$
+## 6. Extending the comparison to the historical population
 
-Thus an integral of $D_e$ normalized by initial magnetic energy is a
-normalized nonideal-work diagnostic, not by itself an exact magnetic-energy
-loss or irreversible heating fraction [3,8]. The paper explicitly calls it a
-proxy. Its reported regional ordering is not disproved by this distinction.
-The posted Python expression is consistent with the normalized $c=1$
-convention. This dimensional identity does not identify a unit error in the
-published diagnostic outputs.
-
-A portable exact check illustrates the distinction. In normalized
-$m=e=c=\epsilon_0=n_+=n_-=1$ units, homogeneous cold counterstreaming beams
-with momenta $\pm p$ satisfy $\dot p=E$ and
-$\dot E=-2p/\sqrt{1+p^2}$. A parallel constant magnetic field does no work and
-does not change. The conserved electric-plus-particle energy is
-$E^2/2+2(\sqrt{1+p^2}-1)$. From $p=0,E=1$ to the first $E=0$,
-$p=0.75$, the laboratory field-energy loss and particle-energy gain are both
-0.5, whereas
-$\int D_e\,dt=\int2p\dot p\,dt=0.5625$.
-This checks the lack of a general equality; it is not a reconnection
-simulation or an estimate of the diagnostic bias in [1].
-
-Finally, implementation requires the physical definition and producer of any
-input velocity/momentum files and the order of temporal averaging. Variable
-names alone do not establish that a mean particle proper momentum is the
-four-velocity of the number-flow mean. Those semantics remain a
-reproducibility limitation here; no unverified velocity-file bug is claimed.
-
-## 6. A reproducible population reanalysis
+Section 5 executes the paired ledger comparison on all available posted
+histories and reports both estimands after common band selection. The
+remaining extension is to a completely identified historical Figure 6
+cohort, with its run, endpoint, sampling design and physical weights. The
+following protocol specifies that extension and the separate validation
+of continuous electric work; it is not presented as an additional
+population calculation already completed here.
 
 The demonstrated method discrepancy can be addressed without changing the
 underlying particle-in-cell calculation. The primary empirical question is how
@@ -636,17 +591,19 @@ reanalysis.
 
 The source scope is the supplied 11-page arXiv:2511.15988v1, verified byte for byte against the official versioned PDF, together with explicitly dated and hashed files in the author-associated OSF deposit [2]. The current official arXiv record lists only v1. Our bounded checks did not identify a journal edition or erratum. Differently titled, unindexed or inaccessible versions remain possible. The OSF deposit has later updates and figure numbering that differs from the preprint; the entire deposit is not treated as a single historical snapshot of the preprint's execution.
 
-The four trajectory examples were selected by the original authors for illustration. They are not a random sample from which to estimate a population bias, confidence interval or revised Fig. 6 mean. Matching their eight printed annotations to the posted function gives a strong example-level link. It does not identify a complete archived historical cohort, its sampling probabilities, every plotting operation or an exact simulation executable. No claim of a reversal of the full-cohort downstream/current-sheet ordering follows from the present data.
+The four trajectory examples were selected by the original authors for illustration. Three exactly match gamma, position and region histories in the larger public batch over all 40,764 samples. The revised analysis also includes every one of the 1,003 posted batch histories and applies common final-energy cuts after pooling; 667 intermediate and 84 high-energy records enter the main comparisons. Neither complete processing of these files nor their internal example matches establishes random release selection, inclusion probabilities or a revised full-population Figure 6 mean. The available intermediate-band first-passage mean differs from the published point. The high-band mean agrees only at three-decimal rounding. An exact historical cohort, its complete weights, every plotting operation and the executed simulation binary have not been identified. No claim of reversal of the full-cohort downstream/current-sheet ordering follows.
 
 The discrete full-history estimators retain all recorded visits and signed energy increments. Their left, right and symmetric endpoint conventions can differ considerably when energy changes during recorded transitions. Bounds among endpoint allocations do not bound true continuous work when there are unresolved crossings, returns or sign-changing work within a sample interval. A physical reanalysis should evaluate electric work together with sufficiently resolved position and region histories, test sampling cadence and mask choices, and report uncertainty. Our synthetic examples avoid this ambiguity by construction; the real examples do not.
 
-Pooling the primary sheet with the islands is disclosed in the source Fig. 6 caption and implemented in the posted statistics. We preserve that grouping when making like-for-like comparisons. A particle-mean ratio is also a legitimate statistic. Its mathematical distinction from the share of total energy is not itself an implementation error. A complete population analysis should identify the chosen estimand, macro-particle weights and sample selection, and retain or explicitly account for negative net increments rather than silently clipping them.
+Pooling the primary sheet with the islands is disclosed in the source Fig. 6 caption and implemented in the posted statistics. We retain the source phase pool as such and report actual CS-plus-islands and all-non-downstream pools separately. A particle-mean ratio is also a legitimate statistic. Its mathematical distinction from the share of total energy is not itself an implementation error. A complete population analysis should identify the chosen estimand, macro-particle weights and sample selection, and retain or explicitly account for negative net increments rather than silently clipping them.
 
 The force-free field checks address the printed formula and posted example inputs. They do not establish that an erroneous field was used in the original calculation; the available code instead supports the corrected expression. Approximate grid-spacing language is resolved by the run information, including the stated number of particles per species. The caption exponent discrepancy is a local presentation inconsistency and does not establish an error in a fitted spectrum. We do not infer fabrication, misconduct, intent or failure of the reconnection mechanism from any of these observations.
 
 The electron-frame diagnostic remains useful and Lorentz invariant as defined. Its distinction from a laboratory magnetic-energy budget is an established diagnostic issue, not a discovery that invalidates the source's proxy. The positive curve reconstruction is kept separate from any unresolved run alignment or velocity-file semantics. We have not established an erroneous implementation of that diagnostic or an incorrect normalization of the published curves. Such claims would require an identified producer, execution and plotting chain beyond a variable name or a raw-array comparison.
 
 **Code and data availability.** The public repository is https://github.com/Teylersf/multiscale-reconnection-audit . Its computational snapshot `e3119e6ee98f6d4bfc760a7c851d33f90b3a7d6b` is archived as software version 1.0.0 at https://doi.org/10.5281/zenodo.23774456 [9]. This DOI identifies the code and data archive, not a paper acceptance. The repository contains this manuscript, original audit code, reproducible results and figures, exact upstream provenance and a small set of permitted CC0 fixtures. The default particle-attribution reproduction uses numeric-only NPZ arrays and a pinned excerpt of the deposited function. It does not execute the original script's top-level filesystem operations or load arbitrary object pickles. The analysis records the original and converted file hashes and per-array byte digests. The proxy reconstruction and analytic checks have separate scripts and results. All are designed to run from repository-local inputs; no original HPC path, GPU allocation or full particle-in-cell rerun is required. The release records exact scientific artifact hashes and separates venue receipts from numerical evidence.
+
+The revised computational snapshot `a8cb56dadaf6fdf6d07ce6aba0d94b9ad291f9d5` is archived as software version 1.1.0 at https://doi.org/10.5281/zenodo.23775167 [10], with direct record https://zenodo.org/records/23775167 . It adds the serialized public-data fetcher, streaming paired analysis, compact per-particle NPZ/CSV exports, independent summary verifier and all source-link receipts. The archive is 2,702,929 bytes, with SHA-256 `82835a9d7e53c929a690cc5ccc30f3cfdc0efa75ea23344c9f6682ad737b421e`. The 3,107,362,288 bytes of raw batch arrays are linked through their 32-file hash inventory rather than duplicated in this package. The software DOI is registered through DataCite; its primary registry record is https://api.datacite.org/dois/10.5281/zenodo.23775167 . Snapshot-bound checks of the compact exports need no network. A complete raw-data reproduction requires the explicit public download; fresh runtime metadata may differ from the frozen report's byte hash. No private data or author confirmation has been obtained for the unprovided historical cohort.
 
 **Authorship and assistance.** Taylor Kalin is the canonical author and is responsible for this audit and its release. AI tools assisted with source retrieval, mathematical checks, code, internal adversarial review and drafting. These checks are not represented as independent human peer review. Separately authorized agent editions identify their agent byline and retain Taylor Kalin's human-operator and canonical-author credit when a venue requires agent authors.
 
@@ -656,9 +613,9 @@ The electron-frame diagnostic remains useful and Lorentz invariant as defined. I
 
 ## 8. Conclusion
 
-The deposited particle-analysis function calculates first-passage phases. For a trajectory that revisits a region, those phases need not identify the locations of its energy gains and losses. An exact counterexample changes the inferred dominant region while preserving total-gain closure, so closure alone cannot validate regional attribution. Four released trajectories reproduce the eight annotations in the source preprint and demonstrate why the distinction is relevant to the reported examples.
+The deposited particle-analysis function calculates first-passage phases. For a trajectory that revisits a region, those phases need not identify the locations of its energy gains and losses. An exact counterexample changes the inferred dominant region while preserving total-gain closure, so closure alone cannot validate regional attribution. Four released trajectories reproduce the eight preprint annotations, and three match full histories in the larger released batch. The revised calculation measures the attribution difference on 751 in-band records selected from all 1,003 posted histories.
 
-A reproducible reanalysis can retain the full region history, signed work, declared sampling convention and explicit particle weights. It should also distinguish a particle-average fraction from a population energy share. The available example data are insufficient to determine the correction to the published cohort statistic. Establishing that effect remains the main empirical task, rather than a conclusion supplied by the counterexample.
+For the available high-energy subset, the downstream particle mean decreases from 0.500318 to 0.370129 under symmetric full-history attribution, a change of 13.0189 percentage points. Left and right conventions give similar high-band particle means, whereas the intermediate subset retains downstream dominance. The high-band fraction of total net gain decreases from 0.490959 to 0.393724; it was already below one half under first-passage attribution. Thus the two estimands must not be described as undergoing the same ordering change. These are measured paired effects with the available histories, not a uniquely recovered continuous-work partition or a correction to the complete published cohort. The mismatch to the original intermediate-band point and the undocumented batch-release selection keep that population question open.
 
 Other checks preserve important positive evidence: the posted fields implement the correct initialization, the force-free guide profile is explicit in the input, and the reported nonideal-work curves can be reconstructed after their plotting transformations. The resulting correction is specific to what has been demonstrated. It calls for a more precise regional particle-energy attribution while retaining the physical results that this audit does not overturn.
 
@@ -926,6 +883,329 @@ additional quantities, but neither is reconstructed by net endpoint changes
 alone. The selected final-energy band, sampling weights and masks must remain
 fixed and disclosed when comparing estimators.
 
+## Appendix B. Ancillary source and diagnostic checks
+
+These checks separate local source-description issues from the regional
+attribution finding. They do not establish an erroneous VPIC evolution.
+
+### Printed equilibrium and the correctly posted field
+
+Equation (1) of the preprint [1] prints
+$B_x=B_0\sinh(x/L)/F$, while
+$F=\cosh(z/L)+\epsilon\cos(x/L)$ and
+$B_z=B_0\epsilon\sin(x/L)/F$. Direct differentiation gives
+
+$$
+\frac{L}{B_0}\nabla\cdot\mathbf B
+=\frac{\cosh(x/L)}F+
+\frac{\epsilon\sin(x/L)[\sinh(x/L)-\sinh(z/L)]}{F^2}.
+$$
+
+At the origin this is $1/(1+\epsilon)=5/7$ for $\epsilon=0.4$, so the printed
+field is not solenoidal. Replacing the numerator by $\sinh(z/L)$ restores
+the intended force-free modification of the Fadeev geometry [1,4]. In fact, with
+$A_y=-B_0L\log F$,
+
+$$
+B_x=-\partial_zA_y,\qquad B_z=\partial_xA_y,\qquad
+B_y=\frac{B_0\sqrt{1-\epsilon^2}}F,
+\qquad
+\nabla\times\mathbf B=
+\frac{\sqrt{1-\epsilon^2}}{LF}\mathbf B.
+$$
+
+The first two identities make the divergence zero; differentiating $B_y$
+and the in-plane components gives the last identity, so
+$(\nabla\times\mathbf B)\times\mathbf B=0$.
+Force-free does not imply constant $B^2$ for this curved equilibrium:
+$B^2/B_0^2=[\cosh(z/L)-\epsilon\cos(x/L)]/F$.
+
+Both currently deposited example decks [2] use the corrected $z$ numerator
+for their unperturbed base field. The coalescence initialization also adds the
+documented triggering perturbation; the equilibrium identities above refer to
+the base field, not to that intentionally perturbed state.
+Their common guide-field prescription is
+
+$$
+B_y=B_0\sqrt{(1-\epsilon^2)/F^2+g^2}.
+$$
+
+The coalescence example has $g=0$. The force-free current-sheet example has
+$\epsilon=0$ and $g=1$, hence
+$B_y=B_0\sqrt{\operatorname{sech}^2(z/L)+1}$.
+This is genuinely force-free with $B_x=B_0\tanh(z/L)$; its total $B^2$ is
+$2B_0^2$. The preprint's footnote [32] describes replacing the out-of-plane
+field by an external guide. Read literally as a *uniform* replacement,
+$B_y=gB_0$, it would instead give
+
+$$
+(\nabla\times\mathbf B)\times\mathbf B
+=-\frac{B_0^2}{L}\operatorname{sech}^2(z/L)
+\tanh(z/L)\,\hat{\mathbf z},
+$$
+
+which is nonzero. The posted profile resolves that description; it provides
+a positive code check rather than evidence of a force-free implementation
+failure. Present deposited examples and metadata do not independently identify
+the exact historical binary and inputs for every reported run.
+
+### Spectral caption
+
+The body and inset of Fig. 5 in [1] specify a power-law index near 3.3, while
+the caption specifies 3. The caption should identify the plotted guide
+consistently. This local discrepancy does not establish a different fitted
+exponent, invalidate the ankle, or reproduce the spectral fitting procedure.
+
+### Electron-frame nonideal work and laboratory energy
+
+The electron-frame measure used in [1] is the established relativistic
+nonideal-work diagnostic [3]. Once the physical electron flow is specified,
+$D_e$ is Lorentz invariant; it should not be described as observer-frame
+dependent. Its relation to the laboratory work rate is the standard identity,
+in dimensional Gaussian units,
+
+$$
+D_e=\gamma_e\left[
+\mathbf J\cdot\left(\mathbf E+
+\frac{\mathbf V_e\times\mathbf B}{c}\right)
+-\rho_c\mathbf V_e\cdot\mathbf E\right],
+\qquad
+\mathbf J\cdot\mathbf E=
+\frac{D_e}{\gamma_e}+
+\frac{\mathbf V_e\cdot(\mathbf J\times\mathbf B)}c
++\rho_c\mathbf V_e\cdot\mathbf E.
+$$
+
+The second equality follows by the scalar triple-product identity. It is not
+a new dissipation law. Poynting's theorem instead gives
+
+$$
+\partial_t\frac{E^2+B^2}{8\pi}
++\nabla\cdot\frac{c\mathbf E\times\mathbf B}{4\pi}
+=-\mathbf J\cdot\mathbf E.
+$$
+
+Thus an integral of $D_e$ normalized by initial magnetic energy is a
+normalized nonideal-work diagnostic, not by itself an exact magnetic-energy
+loss or irreversible heating fraction [3,8]. The paper explicitly calls it a
+proxy. Its reported regional ordering is not disproved by this distinction.
+The posted Python expression is consistent with the normalized $c=1$
+convention. This dimensional identity does not identify a unit error in the
+published diagnostic outputs.
+
+A portable exact check illustrates the distinction. In normalized
+$m=e=c=\epsilon_0=n_+=n_-=1$ units, homogeneous cold counterstreaming beams
+with momenta $\pm p$ satisfy $\dot p=E$ and
+$\dot E=-2p/\sqrt{1+p^2}$. A parallel constant magnetic field does no work and
+does not change. The conserved electric-plus-particle energy is
+$E^2/2+2(\sqrt{1+p^2}-1)$. From $p=0,E=1$ to the first $E=0$,
+$p=0.75$, the laboratory field-energy loss and particle-energy gain are both
+0.5, whereas
+$\int D_e\,dt=\int2p\dot p\,dt=0.5625$.
+This checks the lack of a general equality; it is not a reconnection
+simulation or an estimate of the diagnostic bias in [1].
+
+Finally, implementation requires the physical definition and producer of any
+input velocity/momentum files and the order of temporal averaging. Variable
+names alone do not establish that a mean particle proper momentum is the
+four-velocity of the number-flow mean. Those semantics remain a
+reproducibility limitation here; no unverified velocity-file bug is claimed.
+
+## Appendix C. Positive checks and inferred display reconstruction
+
+The proxy arrays require the same care. Their raw L320 time series has
+122 entries ending at 23.16347, while its raw cumulative total reaches
+0.357089. Directly comparing those raw numbers with the preprint axes or
+with global magnetic-energy loss would suggest a large discrepancy.
+We therefore extracted numerical line coordinates from the original
+vector figures in the official v1 source archive and calibrated their
+axes. This checks the displayed data rather than guessing the missing
+plotting convention.
+
+The following display factors and filter are inferred reconstruction conventions,
+not independently identified historical plotting instructions. All five
+cumulative L320 curves in preprint Fig. 3 are reproduced by
+the first 116 deposited samples using
+
+$$
+\left(t/t_A\right)_{\rm display}
+=t_{\rm raw}/5,\qquad
+\mathcal D_{i,\rm display}
+=\mathcal D_{i,\rm raw}/25.
+$$
+
+The island curve uses the sum of the two deposited island arrays.
+There is source-code unit corroboration for these two scale factors,
+independent of the coordinate fit. The posted tracer plotting driver uses
+$\omega_{pe}/\omega_{ce}=0.2$ and $m_i/m_e=1$, hence
+$\omega_{ci}=5$ in its plasma-frequency convention, and explicitly divides
+its cyclotron-clock intervals by $\omega_{ci}t_A$. The dissipation producer
+instead records its raw cyclotron clock divided by $t_A$. Conversion to
+the stated plasma clock supplies the factor $1/5$. For the nominal L320
+output interval its raw cumulative multiplier is 4000, while the
+corresponding plasma-time interval is 160, giving $4000/160=25$.
+The scripts and exact line locators for this dimensional check are
+recorded in `data/source-claim-evidence.json`. This corroborates the
+scale conversion under the posted conventions; it still does not recover
+a hash-identified original plotting execution. No matching posted
+instruction for the Gaussian width below has been found.
+
+At the common endpoint the reconstructed total is 0.0139557484 at
+$t/t_A=4.40297382$, matching the published curve rather than the raw
+0.357089 endpoint outside that window. Across the five cumulative
+paths and the rate reconstruction below, the largest coordinate
+residual is 0.000555 PDF point, smaller than the declared 0.002-point
+rounding tolerance. The original artwork is not redistributed; the
+portable artifact preserves attributed numeric coordinates and their
+source hashes.
+
+The instantaneous and cumulative files are also coherent. Their stored
+increments obey
+$\Delta\mathcal D_{\rm raw}=4000\,D_{\rm raw}^{\rm inst}$
+with maximum absolute residual $1.483\times10^{-9}$, consistent with
+float32 storage of the instantaneous array. The paper's relativistic
+Alfvén definition gives $t_A=4178.993735$ in plasma-time units for this
+case. Taking the first 115 instantaneous samples, applying a Gaussian
+filter of width 1.5 samples with half-sample symmetric boundary handling,
+and multiplying by $t_A$ reproduces the Fig. 4 blue rate path. The
+corresponding times are $t_{\rm raw}[1{:}116]/5$.
+This is an independently verified display reconstruction; it does not
+claim recovery of an unavailable historical plotting revision.
+
+The common cumulative scale factor cancels in every regional share.
+At the displayed endpoint the downstream fraction is 0.664435 and the
+primary-sheet fraction 0.266235; the islands and top/bottom contribute
+0.0586225 and 0.0107092. Those values are unchanged by the factor of
+25. Thus the deposited curves positively preserve the preprint's
+downstream-dominant ordering of this proxy. They provide no basis for
+alleging that its published integral is too large by that factor.
+The independently generated reconstruction figure and executable check
+make this positive result reviewable.
+
+The global-energy file supplies a bounded cross-check, not an identity
+between the proxy and magnetic-energy conversion. Its 2618 rows contain
+102 repeated restart steps. Keeping either the first or last value at
+each recorded step gives identical data at the reported precision and
+2516 uniformly spaced unique records. Matching the L320 timing
+conditionally, the endpoint of the published window gives an
+electromagnetic-energy loss of approximately $0.020190\,M_0$ and a
+rescaled $\mathbf J\cdot\mathbf E$ integral of $0.020792\,M_0$. These comparable values involve
+different averaging and output cadences and do not prove complete run
+identity or exact energy closure. The same conditional comparison gives a
+particle kinetic-energy gain of $0.022510\,M_0$ and a total recorded-energy
+change of $+0.002320\,M_0$. We report that residual without diagnosing its
+cause or claiming complete conservation from the comparison. The diagnostic spacing inferred from
+409 simulation steps, five output intervals and the recorded timestep
+is 159.70949 plasma-time units; the displayed convention uses the
+nominal value 160, a 0.1819% difference. We record that distinction
+without converting it into an unsupported scientific-error claim.
+
+Finally, this successful reconstruction does not identify
+$\int D_e\,dV\,dt$ with a magnetic-energy decrease or particle-energy
+gain. The electron-frame quantity is a useful proxy whose relationship
+to those budgets requires the appropriate work and transport terms.
+The narrower diagnostic-interpretation question remains legitimate,
+as do the separately tested particle-attribution questions. The
+published proxy normalization, however, is consistent with the
+available source arrays after their explicit display transformations.
+
+
+The coordinate agreement tests whether the released arrays can reproduce
+the published paths under these explicit transformations. It does not
+uniquely identify why the original plot used a given scale, which revision
+of the plotting program was executed, or whether an equivalent historical
+pipeline used different intermediate units. In particular, the factor
+25 is not reported as a discovered normalization error, and the inferred
+Gaussian filter is not presented as a documented instruction by the source
+authors. The dimensionless regional shares are invariant to a common
+positive cumulative scale. The numerical reconstruction is sufficient for
+that positive comparison; stronger producer provenance is a separate claim.
+
+## Appendix D. Deposited first-passage routine
+
+The following is the complete unmodified function at lines 344-403 of the
+December 6, 2025 version-1 OSF file `python_scripts/tracer_functions.py` [2].
+The parent file SHA-256 is
+`3f93e1685dd9664e279f8b14535d4ebc6ba2946442e4831f4eaf24db315d61ba`;
+the exact 60-line excerpt SHA-256 is
+`2909f9e6acec3c48f3838e86c15ffd18a9563dc57984e400b0baadd22f16655f`.
+Its CC0 provenance, stable file identifiers and numeric-fixture conversions
+are recorded in the reproducibility package. The original routine expects
+NumPy as `np` and a `tqdm` iterator in its surrounding module; the audit harness
+supplies these without executing the original module's top-level I/O.
+Line labels in the typeset listing refer to the parent-file line numbers.
+
+```
+def get_energy_by_region_w_bands(gamma_data,region_data,separator1,separator2): # separator 1, 2 interms of gamma, not gamma-1
+    npart = len(gamma_data[0,:])
+    dgamma_cs_1 = np.zeros(npart)
+    dgamma_ds_1 = np.zeros(npart)
+    dgamma_isls_1 = np.zeros(npart)
+    dgamma_cs_2 = np.zeros(npart)
+    dgamma_ds_2 = np.zeros(npart)
+    dgamma_isls_2 = np.zeros(npart)
+    idx_1 = np.array([], dtype=int)
+    idx_2 = np.array([], dtype=int)
+    
+    for i in tqdm(range(npart), desc="Processing particles"):
+        gamma = gamma_data[:,i]
+        region = region_data[:,i]
+
+
+        if gamma[-1] < separator2 and gamma[-1] > separator1 :
+            idx_1 = np.append(idx_1,int(i))
+            # Now check if transits current sheet
+            if len(np.where(region[:]==5)[0]) > 0:
+                cs1 = np.where(region[:]==5)[0][0]
+                cs_last = np.where(region[:]==5)[0][-1]
+                if len(np.where(region[cs1 + 1:]==4)[0]) > 0:
+                    ds1 = np.where(region[cs1 + 1:]==4)[0][0] + cs1+1
+                    dgamma_cs_1[i] = gamma[ds1] - gamma[cs1]
+                    dgamma_ds_1[i] = gamma[-1] - gamma[ds1]
+                    dgamma_isls_1[i] = gamma[cs1] - gamma[0]
+                else:
+                    dgamma_cs_1[i] = gamma[cs_last]-gamma[cs1]
+                    dgamma_isls_1[i] = gamma[cs1] - gamma[0] + (gamma[-1]-gamma[cs_last])
+            elif len(np.where(region[:]==4)[0]) > 0:
+                ds1 = np.where(region[:]==4)[0][0]
+                dgamma_ds_1[i] = gamma[-1] - gamma[ds1]
+                dgamma_isls_1[i] = gamma[ds1] - gamma[0]
+            else:
+                dgamma_isls_1[i] = gamma[-1] - gamma[0]
+                print(i)
+        elif gamma[-1] > separator2: 
+            idx_2 = np.append(idx_2,int(i))
+            # Now check if transits current sheet
+            if len(np.where(region[:]==5)[0]) > 0:
+                cs1 = np.where(region[:]==5)[0][0]
+                cs_last = np.where(region[:]==5)[0][-1]
+                if len(np.where(region[cs1 + 1:]==4)[0]) > 0:
+                    ds1 = np.where(region[cs1 + 1:]==4)[0][0] + cs1+1
+                    dgamma_cs_2[i] = gamma[ds1] - gamma[cs1]
+                    dgamma_ds_2[i] = gamma[-1] - gamma[ds1]
+                    dgamma_isls_2[i] = gamma[cs1] - gamma[0]
+                else:
+                    dgamma_cs_2[i] = gamma[cs_last]-gamma[cs1]
+                    dgamma_isls_2[i] = gamma[cs1] - gamma[0] + (gamma[-1]-gamma[cs_last])
+            elif len(np.where(region[:]==4)[0]) > 0:
+                ds1 = np.where(region[:]==4)[0][0]
+                dgamma_ds_2[i] = gamma[-1] - gamma[ds1]
+                dgamma_isls_2[i] = gamma[ds1] - gamma[0]
+            else:
+                dgamma_isls_2[i] = gamma[-1] - gamma[0]
+                print(i)
+
+    return dgamma_cs_1[idx_1], dgamma_ds_1[idx_1], dgamma_isls_1[idx_1],dgamma_cs_2[idx_2], dgamma_ds_2[idx_2], dgamma_isls_2[idx_2],idx_1,idx_2
+```
+
+The unused `cs_last` value in the downstream branch does not alter that
+branch's first-passage definition. Branches for no subsequent downstream
+visit and no sheet visit are preserved here; they are not replaced by the
+simplified two-passage formula used in the main counterexample. The
+routine's exact threshold comparisons and original return ordering are
+also retained. Printing this later deposited version does not establish
+that these exact source bytes were executed before the v1 preprint.
+
 ## References
 [1] A. Velberg, A. Stanier, X. Li, F. Guo, W. Daughton and N. F. Loureiro, *Effects of Multi-scale Coupling on Particle Acceleration and Energy Partition in Magnetic Reconnection*, arXiv:2511.15988v1 (20 November 2025). https://arxiv.org/abs/2511.15988v1 ; https://arxiv.org/pdf/2511.15988v1 . Audited preprint, including its supplemental material.
 
@@ -944,3 +1224,5 @@ fixed and disclosed when comparing estimators.
 [8] O. Pezzi, H. Liang, J. L. Juno, P. A. Cassak, C. L. Vasconez, L. Sorriso-Valvo, D. Perrone, S. Servidio, V. Roytershteyn, J. M. TenBarge and W. H. Matthaeus, *Dissipation measures in weakly collisional plasmas*, Monthly Notices of the Royal Astronomical Society **505**, 4857-4873 (2021). https://doi.org/10.1093/mnras/stab1516 ; https://arxiv.org/abs/2101.00722 .
 
 [9] T. Kalin, *Computational evidence for First-passage attribution and regional particle energization in multiscale reconnection*, version 1.0.0, Zenodo (2026), software and data. https://doi.org/10.5281/zenodo.23774456 . Computational snapshot `e3119e6ee98f6d4bfc760a7c851d33f90b3a7d6b`.
+
+[10] T. Kalin, *Computational evidence for First-passage attribution and regional particle energization in multiscale reconnection*, version 1.1.0, Zenodo (2026), software and data. https://doi.org/10.5281/zenodo.23775167 ; https://zenodo.org/records/23775167 . Revised computational snapshot `a8cb56dadaf6fdf6d07ce6aba0d94b9ad291f9d5`.

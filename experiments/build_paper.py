@@ -16,15 +16,18 @@ def section(filename,title):
     return '\n'.join(lines)
 
 opening=(PAPER/'opening.md').read_text(encoding='utf-8').strip()
-source=section('source-and-proxy-validation.md','3. Source evidence and positive reconstruction checks')
+source=section('source-provenance.md','3. Source provenance and released particle data')
 methods=section('methods-results.md','4. First-passage attribution and recorded region histories')
-ancillary=section('ancillary-checks.md','5. Ancillary source and diagnostic checks')
-protocol=section('reanalysis-protocol.md','6. A reproducible population reanalysis')
+measured=section('released-batch-results.md','5. Matched attribution on the released particle batches')
+ancillary=section('ancillary-checks.md','Appendix B. Ancillary source and diagnostic checks')
+proxy=section('proxy-validation.md','Appendix C. Positive checks and inferred display reconstruction')
+upstream=section('audited-function.md','Appendix D. Deposited first-passage routine')
+protocol=section('reanalysis-protocol.md','6. Extending the comparison to the historical population')
 theory=section('theory-and-estimands.md','Appendix A. Estimator identities and sampling limits')
 closing=(PAPER/'closing.md').read_text(encoding='utf-8')
 assert closing.count('## References\n')==1
 conclusion,refs=closing.split('## References\n',1)
-text='\n\n'.join([opening,source,methods,ancillary,protocol,conclusion.strip(),theory,'## References\n'+refs.strip()])+'\n'
+text='\n\n'.join([opening,source,methods,measured,protocol,conclusion.strip(),theory,ancillary,proxy,upstream,'## References\n'+refs.strip()])+'\n'
 assert text.count('## Abstract\n')==1
 headings=re.findall(r'^## (\d+)\. ',text,re.M)
 assert headings==[str(i) for i in range(1,9)],headings
@@ -39,6 +42,9 @@ def code_span(match):
     if ' ' in match[1]:return match[0]
     return r'\nolinkurl{'+match[1].replace(r'\_','_')+'}'
 body=re.sub(r'\\texttt\{([^{}]*)\}',code_span,body)
+body,listing_count=re.subn(r'\\begin\{verbatim\}\n(def get_energy_by_region_w_bands.*?)(?:\n)\\end\{verbatim\}',
+    lambda m:r'\begin{lstlisting}[firstnumber=344]'+'\n'+m[1]+'\n'+r'\end{lstlisting}',body,flags=re.S)
+assert listing_count==1,listing_count
 def keep_small_table(match):
     # Both manuscript tables have four rows. Keep each together so a float
     # cannot strand a repeated longtable header on the following page.
@@ -47,7 +53,7 @@ def keep_small_table(match):
     table=table.replace(r'\end{longtable}',r'\bottomrule\noalign{}'+'\n'+r'\end{tabular}')
     return r'\par\noindent\begin{minipage}{\linewidth}'+'\n'+table+'\n'+r'\end{minipage}\par'
 body,table_count=re.subn(r'\\begin\{longtable\}.*?\\end\{longtable\}',keep_small_table,body,flags=re.S)
-assert table_count==2,table_count
+assert table_count>=2,table_count
 body=re.sub(r'^(\\subsection\{[45678]\. )',r'\\FloatBarrier\n\1',body,flags=re.M)
 heading=r'\subsection{References}\label{references}'
 assert body.count(heading)==1
