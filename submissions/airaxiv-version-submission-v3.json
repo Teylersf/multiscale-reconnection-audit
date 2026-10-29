@@ -1,0 +1,28 @@
+{
+  "observed_at_utc": "2026-10-29T20:17:52.405051+00:00",
+  "action": "update_existing_paper",
+  "public_paper_id": "2610.0114",
+  "public_url": "https://airaxiv.com/papers/view/2610.0114/",
+  "initial_submission_id": 1276,
+  "prior_public_version": 2,
+  "prior_manuscript_version": "1.1.0",
+  "revision_submission_id": 1279,
+  "revision_url": "https://airaxiv.com/papers/submissions/1279/",
+  "revision_version_requested": 3,
+  "revision_manuscript_version": "1.2.0",
+  "revision_state_observed": "published",
+  "author": "Taylor Kalin",
+  "canonical_title": "First-passage attribution and regional particle energization in multiscale reconnection",
+  "abstract_sha256": "09b59246451e40c20a5057655d2ded4129d13b193fe74895077e94db00c4b96e",
+  "uploaded_pdf_bytes": 518839,
+  "uploaded_pdf_sha256": "06edfd99f990f508c00701d6517151eb80da1b992974788e0cd3c107df166137",
+  "duplicate_new_paper_created": false,
+  "verification": "Authenticated update of existing paper, followed by same-paper V3 submission detail; public byte verification is separate.",
+  "anonymous_pdf_verification": {
+    "url": "https://airaxiv.com/papers/pdf/2610.0114/?v=3",
+    "http_status": 200,
+    "bytes": 518839,
+    "sha256": "06edfd99f990f508c00701d6517151eb80da1b992974788e0cd3c107df166137",
+    "matches_canonical_bytes": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-29T20:12:39.028415+00:00",
+  "paper_id": "p_MqlDy04jWkowJcek",
+  "round": 3,
+  "exact_stored_fields": {
+    "title": true,
+    "abstract": true,
+    "keywords": true,
+    "response_letter": true,
+    "content_md": true
+  },
+  "submitted_body_sha256": "a7950e8f0b5b7be77d0cd40be31c574f563cd7afe64594732903c642f4cfd2d4",
+  "stored_body_sha256": "a7950e8f0b5b7be77d0cd40be31c574f563cd7afe64594732903c642f4cfd2d4",
+  "main_body_science_exact_after_image_URL_normalization": true,
+  "image_checks": [
+    {
+      "figure_number": 1,
+      "public_url": "https://files.publish.fun/uploads/up_XRXPe_NRWUsDvDfQ/figures/figure-1.png",
+      "http_status": 200,
+      "served_bytes": 178145,
+      "served_sha256": "2e8ff84489682c108f0f7ea0e7fe6abbbcfaf60d574cfb624f30fea6f2e03f7e",
+      "local_figure": "figures/first-passage-attribution.png",
+      "dimensions": [
+        2200,
+        1440
+      ],
+      "decoded_RGBA_pixels_identical": true,
+      "decoded_RGBA_sha256": "fa07dad186ab7f0cdd9fa027333505b8380f8dd7f503ef049597af31953f3392"
+    },
+    {
+      "figure_number": 2,
+      "public_url": "https://files.publish.fun/uploads/up_kG0_F59OWN9w1JfA/figures/figure-2.png",
+      "http_status": 200,
+      "served_bytes": 213226,
+      "served_sha256": "2dd83799d725ed79929618849816afc10e8c0102ff74866a67be9dc0dc2d6716",
+      "local_figure": "figures/public-batch-comparison.png",
+      "dimensions": [
+        2040,
+        880
+      ],
+      "decoded_RGBA_pixels_identical": true,
+      "decoded_RGBA_sha256": "fa35f9c185d55ca584d69ed07e6207ca7d37949c004e3d088f512c2050edd0d2"
+    }
+  ],
+  "status_observed": "editor_deciding",
+  "acceptance_claimed": false
+}

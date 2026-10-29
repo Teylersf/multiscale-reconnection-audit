@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-29T19:27:49.965886+00:00",
+  "paper_id": "p_MqlDy04jWkowJcek",
+  "round": 2,
+  "stored_revision_receipt": "submissions/publishfun-stored-revision-round2.json",
+  "stored_revision_receipt_sha256": "72dd649fb10bdeded9c6759622034bf90419bf1ab1ed2edbb7b963368f39c8f7",
+  "stored_body_sha256": "9bb3adcaf206de99c767ca050b4af36a53d013630f4f70c98b6c00c596b8becc",
+  "checks": [
+    {
+      "figure_number": 1,
+      "public_url": "https://files.publish.fun/uploads/up_XRXPe_NRWUsDvDfQ/figures/figure-1.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "PNG_signature_valid": true,
+      "served_bytes": 178145,
+      "served_sha256": "2e8ff84489682c108f0f7ea0e7fe6abbbcfaf60d574cfb624f30fea6f2e03f7e",
+      "local_figure": "figures/first-passage-attribution.png",
+      "local_bytes": 160350,
+      "local_sha256": "99dcd2f77b79cadae26b5e4d501dba3f7990485d3472405e922a2b36f41538e3",
+      "original_modes": {
+        "served": "RGBA",
+        "local": "RGBA"
+      },
+      "decoded_RGBA_dimensions": {
+        "served": [
+          2200,
+          1440
+        ],
+        "local": [
+          2200,
+          1440
+        ]
+      },
+      "decoded_RGBA_sha256": {
+        "served": "fa07dad186ab7f0cdd9fa027333505b8380f8dd7f503ef049597af31953f3392",
+        "local": "fa07dad186ab7f0cdd9fa027333505b8380f8dd7f503ef049597af31953f3392"
+      },
+      "byte_identical": false,
+      "decoded_RGBA_pixels_identical": true,
+      "maximum_channel_difference": 0,
+      "differing_pixel_count": 0,
+      "checked_at_utc": "2026-10-29T19:27:49.305068+00:00",
+      "passed": true
+    },
+    {
+      "figure_number": 2,
+      "public_url": "https://files.publish.fun/uploads/up_kG0_F59OWN9w1JfA/figures/figure-2.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "PNG_signature_valid": true,
+      "served_bytes": 213226,
+      "served_sha256": "2dd83799d725ed79929618849816afc10e8c0102ff74866a67be9dc0dc2d6716",
+      "local_figure": "figures/public-batch-comparison.png",
+      "local_bytes": 190294,
+      "local_sha256": "b686f20a81cab77af030b37313760afb6e354f05bdd629841e178da9fdfef264",
+      "original_modes": {
+        "served": "RGBA",
+        "local": "RGBA"
+      },
+      "decoded_RGBA_dimensions": {
+        "served": [
+          2040,
+          880
+        ],
+        "local": [
+          2040,
+          880
+        ]
+      },
+      "decoded_RGBA_sha256": {
+        "served": "fa35f9c185d55ca584d69ed07e6207ca7d37949c004e3d088f512c2050edd0d2",
+        "local": "fa35f9c185d55ca584d69ed07e6207ca7d37949c004e3d088f512c2050edd0d2"
+      },
+      "byte_identical": false,
+      "decoded_RGBA_pixels_identical": true,
+      "maximum_channel_difference": 0,
+      "differing_pixel_count": 0,
+      "checked_at_utc": "2026-10-29T19:27:49.965886+00:00",
+      "passed": true
+    }
+  ],
+  "all_processed_figures_match_local_pixels": true,
+  "acceptance_claimed": false,
+  "scope": "Anonymous GETs of only the two image URLs supplied by the stored-revision receipt. PNG re-encoding may change bytes; exact decoded RGBA equality is the integrity check. No API, UI, submission or Git mutation."
+}

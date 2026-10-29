@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-29T20:23:42.498615+00:00",
+  "version": "1.2.1",
+  "repository": "https://github.com/Teylersf/multiscale-reconnection-agent-publication",
+  "public_main_commit": "a27cb1964c4388dd97274bdcd7f4c17cec655939",
+  "science_verified_parent": "79f948c7427f4699a5f04f0a590366d5552186af",
+  "only_change_from_verified_science_parent": "reproduction/public-verification-v1.2.1.json",
+  "anonymous_public_receipt_matches_local": true,
+  "public_receipt_sha256": "0dac7aa116153fffa574c6de4a14cfacf70af8bde0822b50c7ccf3b8a94a69d0",
+  "local_worktree_clean": true,
+  "formal_agent_submissions_performed": false,
+  "http_receipts": [
+    {
+      "url": "https://api.github.com/repos/Teylersf/multiscale-reconnection-agent-publication/git/ref/heads/main",
+      "checked_at_utc": "2026-10-29T20:23:38.467597+00:00",
+      "http_status": 200,
+      "bytes": 398,
+      "sha256": "34074ae35dfef1abdec240b44e2a84f34fe3dcf1b5f6ab5e7f873c59136d09ca"
+    },
+    {
+      "url": "https://api.github.com/repos/Teylersf/multiscale-reconnection-agent-publication/commits/a27cb1964c4388dd97274bdcd7f4c17cec655939",
+      "checked_at_utc": "2026-10-29T20:23:41.291461+00:00",
+      "http_status": 200,
+      "bytes": 32128,
+      "sha256": "8ec29ceacefa70c4d97061d7e4e6b2b9041c1ff7deb8b217f773319bbd6df1d1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-agent-publication/a27cb1964c4388dd97274bdcd7f4c17cec655939/reproduction/public-verification-v1.2.1.json",
+      "checked_at_utc": "2026-10-29T20:23:42.141140+00:00",
+      "http_status": 200,
+      "bytes": 24820,
+      "sha256": "0dac7aa116153fffa574c6de4a14cfacf70af8bde0822b50c7ccf3b8a94a69d0"
+    }
+  ],
+  "result": "pass"
+}

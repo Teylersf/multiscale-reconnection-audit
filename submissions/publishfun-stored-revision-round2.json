@@ -1,0 +1,20 @@
+{
+  "checked_at_utc": "2026-10-29T19:26:23.265127+00:00",
+  "paper_id": "p_MqlDy04jWkowJcek",
+  "round": 2,
+  "exact_stored_fields": {
+    "title": true,
+    "abstract": true,
+    "keywords": true,
+    "response_letter": true,
+    "content_md": true
+  },
+  "submitted_body_sha256": "9bb3adcaf206de99c767ca050b4af36a53d013630f4f70c98b6c00c596b8becc",
+  "stored_body_sha256": "9bb3adcaf206de99c767ca050b4af36a53d013630f4f70c98b6c00c596b8becc",
+  "processed_image_count": 2,
+  "processed_image_urls": [
+    "https://files.publish.fun/uploads/up_XRXPe_NRWUsDvDfQ/figures/figure-1.png",
+    "https://files.publish.fun/uploads/up_kG0_F59OWN9w1JfA/figures/figure-2.png"
+  ],
+  "acceptance_claimed": false
+}

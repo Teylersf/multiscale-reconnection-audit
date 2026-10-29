@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-29T20:28:37.300851+00:00",
+  "public_agent_commit": "270882dfc48bebb58601cfb0f4e27d29820653cc",
+  "parent_commit": "a27cb1964c4388dd97274bdcd7f4c17cec655939",
+  "change_scope": "Only four safe status/readback files; all67 canonical copies and scientific manuscripts unchanged.",
+  "AgentPub": {
+    "paper_id": "paper_2026_9615f4",
+    "status_observed": "submitted",
+    "content_verification_receipt": "submissions/agentpub-content-verification.json",
+    "content_receipt_sha256": "ae479c6f8b23f1896e56653fc76f099fb3d034aa67a1dba9c649e14c9115be3e"
+  },
+  "AAES": {
+    "http_status": 403,
+    "error_category": "github_account_verification_failed",
+    "error_message": "Could not verify GitHub account",
+    "registry_id_returned": false
+  },
+  "local_worktree_clean": true,
+  "all_four_public_files_byte_exact": true,
+  "http_receipts": [
+    {
+      "url": "https://api.github.com/repos/Teylersf/multiscale-reconnection-agent-publication/git/ref/heads/main",
+      "checked_at_utc": "2026-10-29T20:28:33.232878+00:00",
+      "http_status": 200,
+      "bytes": 398,
+      "sha256": "66135cfd4369385b89cd94e181d30db30f8731b90af7eabef50891a697dc6e8e"
+    },
+    {
+      "url": "https://api.github.com/repos/Teylersf/multiscale-reconnection-agent-publication/commits/270882dfc48bebb58601cfb0f4e27d29820653cc",
+      "checked_at_utc": "2026-10-29T20:28:34.749528+00:00",
+      "http_status": 200,
+      "bytes": 20038,
+      "sha256": "5748df16e71d7fde453a79e68e8a0ce20120fa2d8ae165140cb6c0d8627efcb6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-agent-publication/270882dfc48bebb58601cfb0f4e27d29820653cc/PUBLICATION_STATUS.md",
+      "checked_at_utc": "2026-10-29T20:28:36.356524+00:00",
+      "http_status": 200,
+      "bytes": 3782,
+      "sha256": "d0df9d4052751e18ac9bbe1f487921df6ad2f683cdc000a42dbb3a3897618041"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-agent-publication/270882dfc48bebb58601cfb0f4e27d29820653cc/README.md",
+      "checked_at_utc": "2026-10-29T20:28:36.586857+00:00",
+      "http_status": 200,
+      "bytes": 3585,
+      "sha256": "9d18df0e42cc2c1ea6c61ba94a758f2b29796343467724622c7d7bd465674f57"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-agent-publication/270882dfc48bebb58601cfb0f4e27d29820653cc/reproduction/aaes-access-verification.json",
+      "checked_at_utc": "2026-10-29T20:28:36.820701+00:00",
+      "http_status": 200,
+      "bytes": 832,
+      "sha256": "95257a21755d1d0eb8bfd64335523644008fa19d2b731dc457c82f6b47306564"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-agent-publication/270882dfc48bebb58601cfb0f4e27d29820653cc/reproduction/agentpub-content-verification.json",
+      "checked_at_utc": "2026-10-29T20:28:37.041003+00:00",
+      "http_status": 200,
+      "bytes": 4691,
+      "sha256": "ae479c6f8b23f1896e56653fc76f099fb3d034aa67a1dba9c649e14c9115be3e"
+    }
+  ],
+  "result": "pass"
+}

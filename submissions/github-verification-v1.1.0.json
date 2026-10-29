@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-29T19:20:02.336752+00:00",
+  "repository": {
+    "url": "https://github.com/Teylersf/multiscale-reconnection-audit",
+    "private": false,
+    "visibility": "public"
+  },
+  "release": {
+    "url": "https://github.com/Teylersf/multiscale-reconnection-audit/releases/tag/v1.1.0",
+    "tag": "v1.1.0",
+    "target_commitish": "2a9c731e09c4f27b91d199cb19453aa329b247a6",
+    "resolved_commit": "2a9c731e09c4f27b91d199cb19453aa329b247a6",
+    "published_at": "2026-10-29T19:19:12Z",
+    "draft": false
+  },
+  "release_PDF": {
+    "url": "https://github.com/Teylersf/multiscale-reconnection-audit/releases/download/v1.1.0/main.pdf",
+    "http_status": 200,
+    "content_type": "application/octet-stream",
+    "bytes": 506504,
+    "sha256": "4875972388d519ca6d5dd56ffdfcc262d518eb6d4207fbc0fe16784020e8a84a",
+    "final_host": "release-assets.githubusercontent.com",
+    "final_path": "/github-production-release-asset/1438804381/16d75e1f-e6cd-4d61-9c39-a7d87d9a81aa",
+    "checked_at_utc": "2026-10-29T19:19:59.896505+00:00"
+  },
+  "pinned_manuscript": {
+    "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/2a9c731e09c4f27b91d199cb19453aa329b247a6/paper/manuscript.md",
+    "http_status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 79108,
+    "sha256": "6f0b805ef0f2e9172be416e3ed3aef71679f21320d58babc850e6aaad8217346",
+    "final_host": "raw.githubusercontent.com",
+    "final_path": "/Teylersf/multiscale-reconnection-audit/2a9c731e09c4f27b91d199cb19453aa329b247a6/paper/manuscript.md",
+    "checked_at_utc": "2026-10-29T19:20:00.336037+00:00"
+  },
+  "scientific_code_commit": "a8cb56dadaf6fdf6d07ce6aba0d94b9ad291f9d5",
+  "Publish_fun_figure_URLs": [
+    {
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/a8cb56dadaf6fdf6d07ce6aba0d94b9ad291f9d5/figures/first-passage-attribution.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "bytes": 160350,
+      "sha256": "99dcd2f77b79cadae26b5e4d501dba3f7990485d3472405e922a2b36f41538e3",
+      "final_host": "raw.githubusercontent.com",
+      "final_path": "/Teylersf/multiscale-reconnection-audit/a8cb56dadaf6fdf6d07ce6aba0d94b9ad291f9d5/figures/first-passage-attribution.png",
+      "checked_at_utc": "2026-10-29T19:20:00.692970+00:00",
+      "matches_frozen_local_bytes": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/a8cb56dadaf6fdf6d07ce6aba0d94b9ad291f9d5/figures/public-batch-comparison.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "bytes": 190294,
+      "sha256": "b686f20a81cab77af030b37313760afb6e354f05bdd629841e178da9fdfef264",
+      "final_host": "raw.githubusercontent.com",
+      "final_path": "/Teylersf/multiscale-reconnection-audit/a8cb56dadaf6fdf6d07ce6aba0d94b9ad291f9d5/figures/public-batch-comparison.png",
+      "checked_at_utc": "2026-10-29T19:20:00.997369+00:00",
+      "matches_frozen_local_bytes": true
+    }
+  ],
+  "AiraXiv_exact_anonymous_checks": [
+    {
+      "url": "https://airaxiv.com/papers/submissions/1276/",
+      "http_status": 404,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 179,
+      "sha256": "5547992afdadb59737c5c0feb1a35dff294cd27145bf290c031737ecf8a2577d",
+      "final_host": "airaxiv.com",
+      "final_path": "/papers/submissions/1276/",
+      "checked_at_utc": "2026-10-29T19:20:01.742895+00:00",
+      "actual_PDF_response": false,
+      "matches_release_PDF_if_actual": null,
+      "scope": "Exact anonymous submission URL only; response does not establish authenticated revision replacement, acceptance or rejection."
+    },
+    {
+      "url": "https://airaxiv.com/papers/submissions/1276/pdf/",
+      "http_status": 404,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 179,
+      "sha256": "5547992afdadb59737c5c0feb1a35dff294cd27145bf290c031737ecf8a2577d",
+      "final_host": "airaxiv.com",
+      "final_path": "/papers/submissions/1276/pdf/",
+      "checked_at_utc": "2026-10-29T19:20:02.318727+00:00",
+      "actual_PDF_response": false,
+      "matches_release_PDF_if_actual": null,
+      "scope": "Exact anonymous submission URL only; response does not establish authenticated revision replacement, acceptance or rejection."
+    }
+  ],
+  "checks": {
+    "repo_anonymously_public": true,
+    "release_published": true,
+    "tag_resolves_expected_commit": true,
+    "release_PDF_HTTP200": true,
+    "release_PDF_actual_PDF": true,
+    "release_PDF_expected_hash_and_length": true,
+    "pinned_manuscript_expected_hash": true,
+    "both_PF_figure_URLs_public_and_match_frozen_bytes": true
+  },
+  "all_GitHub_checks_passed": true,
+  "scope": "Anonymous read-only requests with TaylorKalinResearch User-Agent and 30-second deadlines. No credentials, private local paths or signed final-delivery query strings are retained. No Git or service mutations."
+}

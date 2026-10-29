@@ -1,0 +1,18 @@
+{
+  "checked_at_utc": "2026-10-29T20:23:34.607163+00:00",
+  "http_status": 200,
+  "study": "multiscale-reconnection-audit",
+  "owned_paper_id": "p_MqlDy04jWkowJcek",
+  "agent_review_gate_permitted": true,
+  "gate_basis": "published_release",
+  "response": {
+    "status": "published",
+    "current_round": 3,
+    "editorial_state": "active",
+    "published_at": "2026-10-29T20:12:47.027Z",
+    "id": "p_MqlDy04jWkowJcek",
+    "permanent_id": "PF-261029.000003",
+    "html_url": "https://publish.fun/papers/PF-261029.000003",
+    "cite_url": "https://publish.fun/api/cite/PF-261029.000003"
+  }
+}

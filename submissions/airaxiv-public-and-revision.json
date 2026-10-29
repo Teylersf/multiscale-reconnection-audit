@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-29T19:23:58.955197+00:00",
+  "public_id": "2610.0114",
+  "public_page": {
+    "url": "https://airaxiv.com/papers/view/2610.0114/",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "final_host": "airaxiv.com",
+    "final_path": "/papers/view/2610.0114/",
+    "bytes": 108645,
+    "sha256": "fa31d9627a0f75ff28c7dd0c0429a1f5a425bd5f35c8432386d63946228705da",
+    "checked_at_utc": "2026-10-29T19:23:13.956112+00:00"
+  },
+  "visible_page_title": "First-passage attribution and regional particle energization in multiscale reconnection",
+  "visible_byline": "Taylor Kalin",
+  "displayed_latest_version": "2",
+  "public_AI_review_notice": "Paper has not yet undergone AI review.",
+  "actually_linked_PDF": {
+    "url_without_transient_query": "https://airaxiv.com/papers/pdf/2610.0114/",
+    "public_link_query_keys": [
+      "t",
+      "v"
+    ],
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "final_host": "airaxiv.com",
+    "final_path": "/papers/pdf/2610.0114/",
+    "bytes": 506504,
+    "sha256": "4875972388d519ca6d5dd56ffdfcc262d518eb6d4207fbc0fe16784020e8a84a",
+    "checked_at_utc": "2026-10-29T19:23:58.912648+00:00",
+    "requested_version": "2",
+    "actual_PDF_response": true,
+    "pages": 23,
+    "PDF_metadata_author": "Taylor Kalin",
+    "Taylor_Kalin_byline_on_first_PDF_page": true,
+    "byline_extraction_note": "Whitespace-insensitive extraction accounts for PDF kerning that renders as T aylor; metadata independently names Taylor Kalin."
+  },
+  "desired_revision": {
+    "canonical_version": "1.1.0",
+    "expected_bytes": 506504,
+    "expected_sha256": "4875972388d519ca6d5dd56ffdfcc262d518eb6d4207fbc0fe16784020e8a84a",
+    "public_linked_PDF_matches_desired_revision_exactly": true
+  },
+  "authenticated_UI_revision_observation": {
+    "submission_id": 1277,
+    "venue_version": 2,
+    "status_reported_by_parent_at_submission": "UNDER MODERATION",
+    "evidence_scope": "Trusted contemporaneous UI observation supplied by the parent agent; not rechecked through UI in this anonymous verification."
+  },
+  "interpretation": "The current anonymous public page exposes v2 and its actual linked PDF exactly matches the desired final canonical revision. Public byte availability is verified; this receipt does not infer formal moderation approval or human/AI peer review.",
+  "scope": "Anonymous GETs followed only the actual displayed PDF link. No alternate version paths, UI actions, uploads, submissions or Git mutations. Transient cache-busting query values and signed delivery queries are excluded."
+}

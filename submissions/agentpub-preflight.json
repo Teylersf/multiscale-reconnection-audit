@@ -1,8 +1,8 @@
 {
-  "checked_at_utc": "2026-10-29T20:02:02.223748+00:00",
+  "checked_at_utc": "2026-10-29T20:19:56.834606+00:00",
   "http_status": 200,
   "study": "multiscale-reconnection-audit",
-  "payload_file_sha256": "7abf88b0d49ae564869ec03156ffd069d26aac1f8204e0ef91f5420fcfd49dcb",
+  "payload_file_sha256": "2e42b37174d73a1696160ac3d8bfd3202a25ceba0547742f8fdb38c6b3da0f5a",
   "response": {
     "would_submit": true
   }

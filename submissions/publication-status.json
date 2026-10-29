@@ -1,50 +1,89 @@
 {
   "author": "Taylor Kalin",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "scientific_audit": "complete_supported_bounded_methods_findings",
-  "scientific_code_commit": "e3119e6ee98f6d4bfc760a7c851d33f90b3a7d6b",
+  "scientific_code_commit": "83660394cdbd789f297c6da5f18470c00942254a",
   "github": {
     "state": "public_preprint_verified",
     "url": "https://github.com/Teylersf/multiscale-reconnection-audit",
-    "release": "https://github.com/Teylersf/multiscale-reconnection-audit/releases/tag/v1.0.0",
-    "release_commit": "3c353302e820ac592f5a7caf98fbcc3291d989a1",
-    "pdf_sha256": "a8be815a5ff04b631e0989762f91f3ca96e99f6947eefebc361e418fd29a21ae"
+    "release": "https://github.com/Teylersf/multiscale-reconnection-audit/releases/tag/v1.2.1",
+    "release_commit": "0db94a0aacadd4daeeb0c2c110d3b58c8bcb0656",
+    "pdf_sha256": "ea5e7ea36146255c2cb97e06bd3eb689bc46c573defe315ece2e40520a0c1fd4"
   },
   "zenodo": {
     "state": "published_anonymously_verified",
-    "record_id": 23774456,
-    "doi": "10.5281/zenodo.23774456",
-    "url": "https://zenodo.org/records/23774456",
-    "scope": "Computational software and data archive, not paper acceptance"
+    "record_id": 23777646,
+    "doi": "10.5281/zenodo.23777646",
+    "url": "https://zenodo.org/records/23777646",
+    "scope": "Computational software and data archive, not paper acceptance",
+    "computational_version": "1.2.0",
+    "scientific_code_commit": "83660394cdbd789f297c6da5f18470c00942254a",
+    "archive_sha256": "0398c88dc2a68471e283b75240d95235ad78bcc2f4f1946fcb814b3f966954fa"
   },
   "airaxiv": {
-    "state": "under_moderation",
+    "state": "prior_version_public_revision_under_moderation",
     "submission_id": 1276,
-    "public_id": null,
+    "public_id": "2610.0114",
     "submission_url": "https://airaxiv.com/papers/submissions/1276/",
     "author": "Taylor Kalin",
     "classification": "AI-generated submission with human author",
     "category": "Methodology",
-    "submitted_manuscript_version": "1.0.0",
-    "anonymous_pdf_verified": false
+    "submitted_manuscript_version": "1.1.0",
+    "anonymous_pdf_verified": true,
+    "url": "https://airaxiv.com/papers/view/2610.0114/",
+    "public_version": 3,
+    "public_manuscript_version": "1.2.0",
+    "revision_submission_id": 1280,
+    "revision_submission_url": "https://airaxiv.com/papers/submissions/1280/",
+    "revised_manuscript_version": "1.2.1",
+    "revision_state": "under_moderation",
+    "pending_revision_note": "V4 uploaded for the existing paper; awaiting moderation, no duplicate.",
+    "last_ui_check_utc": "2026-10-29T20:22:36.047657+00:00",
+    "revision_uploaded_pdf_sha256": "ea5e7ea36146255c2cb97e06bd3eb689bc46c573defe315ece2e40520a0c1fd4",
+    "public_pdf_sha256": "06edfd99f990f508c00701d6517151eb80da1b992974788e0cd3c107df166137",
+    "moderation_status_ui": "UNDER MODERATION"
   },
   "publishfun": {
-    "state": "under_review",
-    "observed_at_utc": "2026-10-29T18:34:57.152593+00:00",
+    "state": "published",
+    "observed_at_utc": "2026-10-29T20:13:19.745851+00:00",
     "http_status": 200,
     "paper_id": "p_MqlDy04jWkowJcek",
-    "current_round": 1,
+    "current_round": 3,
     "editorial_state": "active",
-    "published_at": null,
-    "url": "https://publish.fun/papers/p_MqlDy04jWkowJcek",
-    "review_type": "AI review"
+    "published_at": "2026-10-29T20:12:47.027Z",
+    "url": "https://publish.fun/papers/PF-261029.000003",
+    "review_type": "AI review",
+    "permanent_id": "PF-261029.000003",
+    "accepted_manuscript_version": "1.2.0",
+    "editorial_correction_manuscript_version": "1.2.1",
+    "editorial_correction_state": "request_sent_publisher_reply_pending"
   },
   "agentpub": {
-    "state": "prepared_pending_publishfun_final_disposition"
+    "state": "submitted",
+    "observed_at_utc": "2026-10-29T20:23:59.502731+00:00",
+    "http_status": 200,
+    "paper_id": "paper_2026_9615f4",
+    "url": "https://agentpub.org/papers/paper_2026_9615f4",
+    "review_summary": {
+      "decision": null,
+      "reviewer_count": 0,
+      "review_rounds": 0,
+      "panel_size": null,
+      "reviews_pending": null
+    },
+    "submitted_manuscript_version": "1.2.1",
+    "stored_science_verified": true,
+    "verification_receipt": "submissions/agentpub-content-verification.json"
   },
   "aaes": {
-    "state": "prepared_pending_publishfun_final_disposition"
+    "state": "registration_failed",
+    "observed_at_utc": "2026-10-29T20:23:36.589367+00:00",
+    "http_status": 403,
+    "registry_paper_id": null,
+    "registration_attempts": 1,
+    "error": "Could not verify GitHub account"
   },
   "review_disclosure": "Internal AI checks and venue AI review are not represented as independent human peer review. Public preprint, submission and acceptance states are distinct.",
-  "checked_at_utc": "2026-10-29T18:36:21.081722+00:00"
+  "checked_at_utc": "2026-10-29T20:29:31.981836+00:00",
+  "publication_revision_pending": false
 }

@@ -1,0 +1,14 @@
+{
+  "checked_at_utc": "2026-10-29T20:23:36.589367+00:00",
+  "http_status": 403,
+  "study": "multiscale-reconnection-audit",
+  "request_body_sha256": "c50078ca80a5fda678eaa45c4d8192b6653a02f2f993ae389f8b758eab6bb9d6",
+  "payload_file_sha256": "c9d794f2cb4c58c4eed9fbca0975b5893456973968b768a7832cda905f243fe0",
+  "response": {
+    "error": "Could not verify GitHub account"
+  },
+  "error_category": "github_account_verification_failed",
+  "registry_id_returned": false,
+  "registration_completed": false,
+  "interpretation": "The actual response to this study registration attempt was HTTP 403 with the stated GitHub-account verification error. No AAES registry ID was returned; no retry or access-control bypass is claimed."
+}

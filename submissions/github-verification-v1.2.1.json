@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-29T20:20:21.702483+00:00",
+  "repository": {
+    "url": "https://github.com/Teylersf/multiscale-reconnection-audit",
+    "private": false,
+    "visibility": "public"
+  },
+  "release": {
+    "url": "https://github.com/Teylersf/multiscale-reconnection-audit/releases/tag/v1.2.1",
+    "tag": "v1.2.1",
+    "target_commitish": "0db94a0aacadd4daeeb0c2c110d3b58c8bcb0656",
+    "resolved_commit": "0db94a0aacadd4daeeb0c2c110d3b58c8bcb0656",
+    "remote_tag_commit_verified": true,
+    "published_at": "2026-10-29T20:20:18Z",
+    "draft": false
+  },
+  "release_PDF": {
+    "url": "https://github.com/Teylersf/multiscale-reconnection-audit/releases/download/v1.2.1/main.pdf",
+    "http_status": 200,
+    "content_type": "application/octet-stream",
+    "bytes": 520038,
+    "sha256": "ea5e7ea36146255c2cb97e06bd3eb689bc46c573defe315ece2e40520a0c1fd4",
+    "final_host": "release-assets.githubusercontent.com",
+    "checked_at_utc": "2026-10-29T20:20:23.552822+00:00",
+    "matches_frozen_local_bytes": true
+  },
+  "pinned_manuscript": {
+    "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/0db94a0aacadd4daeeb0c2c110d3b58c8bcb0656/paper/manuscript.md",
+    "http_status": 200,
+    "content_type": "text/plain",
+    "bytes": 89231,
+    "sha256": "5560637f8e48586e350d23771b7e8bfff55f25498eee02c174a7cc3ed5d86d1b",
+    "final_host": "raw.githubusercontent.com",
+    "checked_at_utc": "2026-10-29T20:20:23.831697+00:00",
+    "matches_frozen_local_bytes": true
+  },
+  "scientific_code_commit": "83660394cdbd789f297c6da5f18470c00942254a",
+  "Publish_fun_figure_URLs": [
+    {
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/83660394cdbd789f297c6da5f18470c00942254a/figures/first-passage-attribution.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "bytes": 160350,
+      "sha256": "99dcd2f77b79cadae26b5e4d501dba3f7990485d3472405e922a2b36f41538e3",
+      "final_host": "raw.githubusercontent.com",
+      "checked_at_utc": "2026-10-29T20:20:24.140180+00:00",
+      "matches_frozen_local_bytes": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/83660394cdbd789f297c6da5f18470c00942254a/figures/public-batch-comparison.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "bytes": 190294,
+      "sha256": "b686f20a81cab77af030b37313760afb6e354f05bdd629841e178da9fdfef264",
+      "final_host": "raw.githubusercontent.com",
+      "checked_at_utc": "2026-10-29T20:20:24.438583+00:00",
+      "matches_frozen_local_bytes": true
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "state": "sent_verified",
+  "sent_at_utc": "2026-10-29T20:22:10Z",
+  "from": "teylersf@gmail.com",
+  "to": "legal@publish.fun",
+  "subject": "Post-publication editorial correction — PF-261029.000003 (Taylor Kalin)",
+  "paper_id": "p_MqlDy04jWkowJcek",
+  "permanent_id": "PF-261029.000003",
+  "accepted_manuscript_version": "1.2.0",
+  "corrected_manuscript_version": "1.2.1",
+  "public_correction_release": "https://github.com/Teylersf/multiscale-reconnection-audit/releases/tag/v1.2.1",
+  "outcome": "Publisher reply and update pending; dispatch does not establish a changed published copy."
+}
