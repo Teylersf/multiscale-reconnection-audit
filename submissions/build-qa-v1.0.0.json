@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "artifact_version": "1.0.0",
+  "created_utc": "2026-10-29T18:28:48.989129+00:00",
+  "status": "pass",
+  "scope": "Build and visual PDF quality assurance; scientific validity and venue acceptance are separate checks.",
+  "artifact": {
+    "path": "paper/main.pdf",
+    "sha256": "a8be815a5ff04b631e0989762f91f3ca96e99f6947eefebc361e418fd29a21ae",
+    "bytes": 290443,
+    "pages": 18,
+    "page_size_points": [
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ],
+      [
+        612.0,
+        792.0
+      ]
+    ],
+    "metadata": {
+      "Creator": "LaTeX with hyperref",
+      "Title": "First-passage attribution and regional particle energization in multiscale reconnection",
+      "Subject": "Source-verified methods audit of arXiv:2511.15988v1 and its public postprocessing deposit",
+      "Author": "Taylor Kalin",
+      "Producer": "xdvipdfmx (0.1)",
+      "CreationDate": "D:20261029182712-00'00'"
+    }
+  },
+  "compile_log": {
+    "path": "paper/main.log",
+    "sha256": "76bae675c286fa2b1938971de7c04008dde5f36782b35bca0e3731ec1c9fee7d",
+    "output_page_count_marker": 18,
+    "diagnostic_counts": {
+      "overfull_boxes": 0,
+      "underfull_boxes": 0,
+      "missing_characters": 0,
+      "latex_warnings": 0,
+      "undefined_references_or_control_sequences": 0,
+      "tex_error_lines": 0
+    },
+    "interpretation": "No TeX error, overfull or underfull box, missing-character, undefined-reference or LaTeX-warning matches in the reviewed final log."
+  },
+  "rendering": {
+    "tool": "Poppler pdftoppm",
+    "version": "26.07.0",
+    "dpi": 85,
+    "pages_rendered": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "method": "All final pages rendered. Pages1-6 pixel-identical to their previously inspected renders; all changed pages7-18 visually inspected again, with pages7-8 individually inspected. Prior iteration inspected all18 pages.",
+    "pixel_identical_to_previous_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "rebuilt_changed_pages_inspected": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "pinned_pdf_matches_current": true,
+    "scratch_renders_in_release": false
+  },
+  "visual_page_coverage": [
+    {
+      "page": 1,
+      "status": "pass",
+      "checks": "Title, Taylor Kalin byline, contact line and abstract readable; pixel-identical to reviewed version."
+    },
+    {
+      "page": 2,
+      "status": "pass",
+      "checks": "Opening argument and claim scope readable; pixel-identical to reviewed version."
+    },
+    {
+      "page": 3,
+      "status": "pass",
+      "checks": "Source provenance, hashes, corrected J-dot-E and field equations readable; pixel-identical to reviewed version."
+    },
+    {
+      "page": 4,
+      "status": "pass",
+      "checks": "Proxy transforms, rescaled J-dot-E and bounded energy comparison readable; pixel-identical to reviewed version."
+    },
+    {
+      "page": 5,
+      "status": "pass",
+      "checks": "First-passage formulas, file/function names and provenance readable; pixel-identical to reviewed version."
+    },
+    {
+      "page": 6,
+      "status": "pass",
+      "checks": "Counterexample and endpoint formulas readable; pixel-identical to reviewed version."
+    },
+    {
+      "page": 7,
+      "status": "pass",
+      "checks": "Both four-row tables fit together on one page, with complete rows, headers and bottom rules; inspected individually."
+    },
+    {
+      "page": 8,
+      "status": "pass",
+      "checks": "Figure1 panels, axes, legend and caption readable; empty repeated table header is absent; denominator paragraph intact; inspected individually."
+    },
+    {
+      "page": 9,
+      "status": "pass",
+      "checks": "Mean-fraction example, scope and equilibrium formulas fit within text block."
+    },
+    {
+      "page": 10,
+      "status": "pass",
+      "checks": "Guide-profile, electron-frame work and laboratory-energy formulas fit within text block."
+    },
+    {
+      "page": 11,
+      "status": "pass",
+      "checks": "Reanalysis protocol and field/mask sampling qualifications readable."
+    },
+    {
+      "page": 12,
+      "status": "pass",
+      "checks": "Limitations and source interpretation readable without clipping."
+    },
+    {
+      "page": 13,
+      "status": "pass",
+      "checks": "Repository URL, full 40-character computation pin and Zenodo DOI fit; disclosures and conclusion readable."
+    },
+    {
+      "page": 14,
+      "status": "pass",
+      "checks": "Conclusion continuation, appendix first-passage definitions and proof readable."
+    },
+    {
+      "page": 15,
+      "status": "pass",
+      "checks": "Counterexample, exact discrepancy, continuous-work and closure equations readable."
+    },
+    {
+      "page": 16,
+      "status": "pass",
+      "checks": "Endpoint-sensitivity propositions and bounds readable without clipping."
+    },
+    {
+      "page": 17,
+      "status": "pass",
+      "checks": "Covariance proposition and first bibliography entries readable."
+    },
+    {
+      "page": 18,
+      "status": "pass",
+      "checks": "Remaining references including reference9 DOI and full computational pin readable and within margins."
+    }
+  ],
+  "cross_document_checks": {
+    "title_and_author_metadata_match_title_page": true,
+    "page_numbers_contiguous_1_through_18": true,
+    "equations_and_symbols_legible": true,
+    "tables_complete_and_legible": true,
+    "figure_panels_labels_legend_and_caption_legible": true,
+    "references_and_source_locators_readable": true,
+    "source_function_names_hashes_and_line_locators_not_clipped": true,
+    "command_formatting": "No displayed shell-command block occurs in the manuscript. Inline code/file identifiers wrap within the text block.",
+    "malformed_J_middle_dot_E_occurrences_in_extracted_text": 0,
+    "replacement_character_occurrences_in_extracted_text": 0,
+    "bibliography_entries_1_through_9_present": true,
+    "full_computational_pin_occurrences": 2,
+    "required_new_link_targets_verified": [
+      "https://doi.org/10.5281/zenodo.23774456",
+      "https://github.com/Teylersf/multiscale-reconnection-audit"
+    ],
+    "downstream_table_header_occurrences": 1,
+    "no_empty_table_continuation_header": true
+  },
+  "resolved_initial_findings": [
+    {
+      "pages": [
+        3,
+        4
+      ],
+      "description": "Two prose J-middle-dot-E occurrences initially rendered as J + u-with-ring + E; replaced by explicit math-mode dot and confirmed visually."
+    },
+    {
+      "pages": [
+        8,
+        9
+      ],
+      "description": "Nonzero-denominator wording clarified so the mathematical domain is not mistaken for an implemented upstream filter; reflow inspected."
+    },
+    {
+      "pages": [
+        7,
+        8
+      ],
+      "description": "A rebuilt version introduced an empty repeated longtable header on page8. Both four-row tables are now kept together using tabular/minipage; all rows and bottom rules are complete on page7 and the duplicate header is absent."
+    }
+  ],
+  "nonblocking_observations": [
+    "The paragraph spanning pages7-8 is interrupted by a top figure float; text and caption are complete.",
+    "A DOI in reference3 continues onto page18; the complete DOI is readable and the hyperlink remains intact."
+  ],
+  "outstanding_defects": [],
+  "sanitization": "Receipt uses release-relative paths and contains no credentials, local user-directory paths or private access tokens.",
+  "manuscript": {
+    "path": "paper/manuscript.md",
+    "sha256": "c59b66ac442249531a4218d89f64f662eb0d686545d7aa420f33c2830373685a",
+    "bytes": 59843
+  },
+  "delivery_copy": {
+    "workspace_relative_path": "output/pdf/multiscale-reconnection-audit.pdf",
+    "sha256": "a8be815a5ff04b631e0989762f91f3ca96e99f6947eefebc361e418fd29a21ae",
+    "byte_identical_to_paper_pdf": true
+  }
+}

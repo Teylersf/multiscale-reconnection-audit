@@ -1,0 +1,18 @@
+{
+  "title": "First-passage attribution and regional particle energization in multiscale reconnection",
+  "abstract": "Regional particle energization requires tracking where each energy increment occurs. We audit the particle-attribution method associated with arXiv:2511.15988v1 and its author-associated public code and data deposit. The posted routine partitions each trajectory into chronological phases bounded by first current-sheet and downstream passages. Later energy changes remain assigned to the downstream phase even when a particle returns to another region. An explicit trace with no energy change during region transitions reverses the inferred current-sheet/downstream ordering while preserving exact total-gain closure. Applying the deposited function to four selected public trajectories reproduces all eight current-sheet/downstream annotations in the preprint, establishing a direct example-level connection. We supply full-history, signed-increment estimators, distinguish particle-mean fractions from energy-weighted fractions, and quantify sensitivity to discrete endpoint assignment. The available examples do not determine the correction to the full particle cohort or establish a reversal of the published population result. Positive checks recover the corrected force-free initialization from the posted decks and reconstruct the published electron-frame diagnostic curves with their plotting transformations. Minor printed field and caption discrepancies are separated from implemented physics. The resulting methods comment identifies a reproducible attribution problem and a concrete reanalysis procedure while preserving conclusions that the available evidence does not refute.",
+  "author": "Taylor Kalin",
+  "orcid": "0009-0003-9000-9315",
+  "version": "1.0.0",
+  "scientific_code_commit": "e3119e6ee98f6d4bfc760a7c851d33f90b3a7d6b",
+  "code_doi": "10.5281/zenodo.23774456",
+  "keywords": [
+    "magnetic reconnection",
+    "particle energization",
+    "first passage",
+    "regional attribution",
+    "reproducibility",
+    "particle-in-cell"
+  ],
+  "repository": "https://github.com/Teylersf/multiscale-reconnection-audit"
+}

@@ -1,0 +1,22 @@
+{
+  "author": "Taylor Kalin",
+  "version": "1.0.0",
+  "scientific_audit": "complete_supported_bounded_methods_findings",
+  "scientific_code_commit": "e3119e6ee98f6d4bfc760a7c851d33f90b3a7d6b",
+  "github": {
+    "state": "public_repository_verified_release_prepared",
+    "url": "https://github.com/Teylersf/multiscale-reconnection-audit"
+  },
+  "zenodo": {
+    "state": "published_anonymously_verified",
+    "record_id": 23774456,
+    "doi": "10.5281/zenodo.23774456",
+    "url": "https://zenodo.org/records/23774456",
+    "scope": "Computational software and data archive, not paper acceptance"
+  },
+  "airaxiv": {"state": "prepared_not_submitted"},
+  "publishfun": {"state": "validated_not_submitted"},
+  "agentpub": {"state": "prepared_pending_publishfun_final_disposition"},
+  "aaes": {"state": "prepared_pending_publishfun_final_disposition"},
+  "review_disclosure": "Internal AI checks and venue AI review are not represented as independent human peer review. Public preprint, submission and acceptance states are distinct."
+}

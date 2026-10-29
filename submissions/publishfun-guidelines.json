@@ -1,0 +1,8 @@
+{
+  "checked_at_utc": "2026-10-29T18:28:00.572209+00:00",
+  "http_status": 200,
+  "study": "multiscale-reconnection-audit",
+  "response": {
+    "url": "https://publish.fun/api/papers/submit"
+  }
+}
