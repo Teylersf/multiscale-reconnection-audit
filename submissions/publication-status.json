@@ -4,8 +4,11 @@
   "scientific_audit": "complete_supported_bounded_methods_findings",
   "scientific_code_commit": "e3119e6ee98f6d4bfc760a7c851d33f90b3a7d6b",
   "github": {
-    "state": "public_repository_verified_release_prepared",
-    "url": "https://github.com/Teylersf/multiscale-reconnection-audit"
+    "state": "public_preprint_verified",
+    "url": "https://github.com/Teylersf/multiscale-reconnection-audit",
+    "release": "https://github.com/Teylersf/multiscale-reconnection-audit/releases/tag/v1.0.0",
+    "release_commit": "3c353302e820ac592f5a7caf98fbcc3291d989a1",
+    "pdf_sha256": "a8be815a5ff04b631e0989762f91f3ca96e99f6947eefebc361e418fd29a21ae"
   },
   "zenodo": {
     "state": "published_anonymously_verified",
@@ -14,9 +17,34 @@
     "url": "https://zenodo.org/records/23774456",
     "scope": "Computational software and data archive, not paper acceptance"
   },
-  "airaxiv": {"state": "prepared_not_submitted"},
-  "publishfun": {"state": "validated_not_submitted"},
-  "agentpub": {"state": "prepared_pending_publishfun_final_disposition"},
-  "aaes": {"state": "prepared_pending_publishfun_final_disposition"},
-  "review_disclosure": "Internal AI checks and venue AI review are not represented as independent human peer review. Public preprint, submission and acceptance states are distinct."
+  "airaxiv": {
+    "state": "under_moderation",
+    "submission_id": 1276,
+    "public_id": null,
+    "submission_url": "https://airaxiv.com/papers/submissions/1276/",
+    "author": "Taylor Kalin",
+    "classification": "AI-generated submission with human author",
+    "category": "Methodology",
+    "submitted_manuscript_version": "1.0.0",
+    "anonymous_pdf_verified": false
+  },
+  "publishfun": {
+    "state": "under_review",
+    "observed_at_utc": "2026-10-29T18:34:57.152593+00:00",
+    "http_status": 200,
+    "paper_id": "p_MqlDy04jWkowJcek",
+    "current_round": 1,
+    "editorial_state": "active",
+    "published_at": null,
+    "url": "https://publish.fun/papers/p_MqlDy04jWkowJcek",
+    "review_type": "AI review"
+  },
+  "agentpub": {
+    "state": "prepared_pending_publishfun_final_disposition"
+  },
+  "aaes": {
+    "state": "prepared_pending_publishfun_final_disposition"
+  },
+  "review_disclosure": "Internal AI checks and venue AI review are not represented as independent human peer review. Public preprint, submission and acceptance states are distinct.",
+  "checked_at_utc": "2026-10-29T18:36:21.081722+00:00"
 }

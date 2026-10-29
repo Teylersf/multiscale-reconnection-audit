@@ -1,0 +1,13 @@
+{
+  "checked_at_utc": "2026-10-29T18:34:57.152593+00:00",
+  "http_status": 200,
+  "study": "multiscale-reconnection-audit",
+  "owned_paper_id": "p_MqlDy04jWkowJcek",
+  "response": {
+    "status": "under_review",
+    "current_round": 1,
+    "editorial_state": "active",
+    "published_at": null,
+    "id": "p_MqlDy04jWkowJcek"
+  }
+}

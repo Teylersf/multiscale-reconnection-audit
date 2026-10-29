@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-29T18:32:44.894392+00:00",
+  "doi": "10.17605/OSF.IO/EPWTU",
+  "registration_authority": "DataCite",
+  "DataCite": {
+    "url": "https://api.datacite.org/dois/10.17605/osf.io/epwtu",
+    "http_status": 200,
+    "final_url": "https://api.datacite.org/dois/10.17605/osf.io/epwtu",
+    "content_type": "application/json; charset=utf-8",
+    "bytes": 6050,
+    "sha256": "cf3f43a87d84015f8be98596024f9086c5e6f8b1259ff92e3f2cc5328ba63b68",
+    "checked_at_utc": "2026-10-29T18:32:43.490566+00:00",
+    "doi": "10.17605/osf.io/epwtu",
+    "state": "findable",
+    "titles": [
+      "Effects of Multi-scale Coupling on Particle Acceleration and Energy Partition in Magnetic Reconnection"
+    ],
+    "creators": [
+      {
+        "name": "Alexander Velberg",
+        "affiliation": [
+          "Massachusetts Institute of Technology"
+        ]
+      }
+    ],
+    "publisher": "OSF",
+    "publication_year": 2025,
+    "registered": "2025-12-05T19:53:45.000Z",
+    "rightsList": [
+      {
+        "rights": "Creative Commons Zero v1.0 Universal",
+        "rightsUri": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "schemeUri": "https://spdx.org/licenses/",
+        "rightsIdentifier": "cc0-1.0",
+        "rightsIdentifierScheme": "SPDX"
+      }
+    ],
+    "resource_type": {
+      "ris": "DATA",
+      "bibtex": "misc",
+      "citeproc": "dataset",
+      "schemaOrg": "Dataset",
+      "resourceType": "Project",
+      "resourceTypeGeneral": "Dataset"
+    }
+  },
+  "OSF_public_metadata": {
+    "url": "https://api.osf.io/v2/nodes/epwtu/",
+    "http_status": 200,
+    "final_url": "https://api.osf.io/v2/nodes/epwtu/",
+    "content_type": "application/vnd.api+json; charset=utf-8",
+    "bytes": 4621,
+    "sha256": "1bd05db02d483067c0f194fc76805dbcae0543d173045bdb25fec95d14b3a2b7",
+    "checked_at_utc": "2026-10-29T18:32:44.050304+00:00",
+    "node_id": "epwtu",
+    "title": "Effects of Multi-scale Coupling on Particle Acceleration and Energy Partition in Magnetic Reconnection",
+    "public": true,
+    "created": "2025-12-05T17:48:50.714121",
+    "modified": "2026-09-21T16:01:45.149856",
+    "public_project_url": "https://osf.io/epwtu/"
+  },
+  "DOI_resolution": {
+    "url": "https://doi.org/10.17605/OSF.IO/EPWTU",
+    "http_status": 200,
+    "final_url": "https://osf.io/epwtu/",
+    "content_type": "text/html",
+    "bytes": 4207,
+    "sha256": "185604818b2f43bab5ffb6a9b93f481d2b739fc22853611c62d4f65322665dd3",
+    "checked_at_utc": "2026-10-29T18:32:44.893387+00:00",
+    "redirects": [
+      {
+        "from_url": "https://doi.org/10.17605/OSF.IO/EPWTU",
+        "http_status": 302,
+        "to_url": "https://osf.io/epwtu/"
+      }
+    ]
+  },
+  "checks": {
+    "DataCite_HTTP200": true,
+    "DataCite_findable": true,
+    "DataCite_expected_title": true,
+    "DataCite_expected_creator": true,
+    "OSF_metadata_HTTP200": true,
+    "OSF_project_public": true,
+    "OSF_expected_title": true,
+    "DOI_redirects_to_expected_OSF_project": true
+  },
+  "all_registration_checks_passed": true,
+  "warnings": [],
+  "interpretation": "The public DataCite registration and OSF API are authoritative positive evidence. A not_found result from a different or unspecified bibliographic lookup does not establish that this registered DOI is invalid. The reviewer's retrieval backend has not been established.",
+  "scope": "Anonymous read-only requests; TaylorKalinResearch User-Agent; 30-second request deadlines; no credentials, private paths or signed query strings retained.",
+  "DOI_registration_authority_service": [
+    {
+      "url": "https://doi.org/ra/10.17605/OSF.IO/EPWTU",
+      "http_status": 200,
+      "checked_at_utc": "2026-10-29T18:33:12.210446+00:00",
+      "sha256": "c4940bf0685e43df92281824a17cb1cc4e69c24894bf785ec312c91a82997a0d",
+      "registration_authority_records": [
+        {
+          "DOI": "10.17605/OSF.IO/EPWTU",
+          "RA": "DataCite"
+        }
+      ]
+    },
+    {
+      "url": "https://doi.org/ra/10.5281/zenodo.23774456",
+      "http_status": 200,
+      "checked_at_utc": "2026-10-29T18:33:12.596415+00:00",
+      "sha256": "8c9943ea8c9ddd5e1147d50cc4a62949160c1f4bb2f82ea2b76824fbcdc5308d",
+      "registration_authority_records": [
+        {
+          "DOI": "10.5281/zenodo.23774456",
+          "RA": "DataCite"
+        }
+      ]
+    }
+  ]
+}

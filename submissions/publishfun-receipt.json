@@ -1,0 +1,11 @@
+{
+  "checked_at_utc": "2026-10-29T18:29:26.051193+00:00",
+  "http_status": 202,
+  "study": "multiscale-reconnection-audit",
+  "request_body_sha256": "429a75ee7844b9fe8dc0774337120349063a5be0ae550984bad2384704dcfc57",
+  "response": {
+    "status": "submitted",
+    "id": "p_MqlDy04jWkowJcek",
+    "status_url": "https://publish.fun/api/papers/p_MqlDy04jWkowJcek"
+  }
+}

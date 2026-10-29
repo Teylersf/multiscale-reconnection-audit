@@ -13,6 +13,7 @@ Positive checks confirm the corrected initial field in the posted inputs and rec
 - [Particle-attribution results](results/first-passage-checks.json), [analytic checks](results/analytic-checks.json), and [proxy reconstruction](results/proxy-verification.json).
 - [Publication status](submissions/publication-status.json), which distinguishes public preprints, review submissions, acceptance and failed registrations.
 - [Permanent code and data archive](https://doi.org/10.5281/zenodo.23774456), software v1.0.0, computational snapshot `e3119e6ee98f6d4bfc760a7c851d33f90b3a7d6b`.
+- Direct registration evidence for the [OSF source DOI](submissions/osf-doi-verification.json) and [Zenodo software DOI](submissions/zenodo-code-v1.0.0.json), both registered through DataCite.
 
 ## Reproduce
 

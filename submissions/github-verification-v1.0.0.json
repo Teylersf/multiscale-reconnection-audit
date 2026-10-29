@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-29T18:30:52.414806+00:00",
+  "repository": {
+    "url": "https://github.com/Teylersf/multiscale-reconnection-audit",
+    "private": false,
+    "visibility": "public",
+    "default_branch": "main"
+  },
+  "release": {
+    "url": "https://github.com/Teylersf/multiscale-reconnection-audit/releases/tag/v1.0.0",
+    "tag": "v1.0.0",
+    "target_commitish": "3c353302e820ac592f5a7caf98fbcc3291d989a1",
+    "resolved_commit": "3c353302e820ac592f5a7caf98fbcc3291d989a1",
+    "published_at": "2026-10-29T18:29:45Z",
+    "draft": false,
+    "prerelease": false
+  },
+  "main_HEAD_at_check": "3c353302e820ac592f5a7caf98fbcc3291d989a1",
+  "release_PDF": {
+    "url": "https://github.com/Teylersf/multiscale-reconnection-audit/releases/download/v1.0.0/main.pdf",
+    "http_status": 200,
+    "content_type": "application/octet-stream",
+    "bytes": 290443,
+    "sha256": "a8be815a5ff04b631e0989762f91f3ca96e99f6947eefebc361e418fd29a21ae",
+    "final_host": "release-assets.githubusercontent.com",
+    "final_path": "/github-production-release-asset/1438804381/1abb474f-59c0-4b29-b08f-fa8df615b259",
+    "checked_at_utc": "2026-10-29T18:30:45.265014+00:00"
+  },
+  "pinned_manuscript": {
+    "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/3c353302e820ac592f5a7caf98fbcc3291d989a1/paper/manuscript.md",
+    "http_status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 59843,
+    "sha256": "c59b66ac442249531a4218d89f64f662eb0d686545d7aa420f33c2830373685a",
+    "final_host": "raw.githubusercontent.com",
+    "final_path": "/Teylersf/multiscale-reconnection-audit/3c353302e820ac592f5a7caf98fbcc3291d989a1/paper/manuscript.md",
+    "checked_at_utc": "2026-10-29T18:30:45.663989+00:00"
+  },
+  "pinned_scripts_and_fixtures": [
+    {
+      "path": "experiments/build_paper.py",
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/3c353302e820ac592f5a7caf98fbcc3291d989a1/experiments/build_paper.py",
+      "http_status": 200,
+      "bytes": 3631,
+      "sha256": "7c1246347b5abb5885df8ee61a374aebf8ac09cc26e7e4cbd52ea82acb361e17",
+      "matches_current_local_bytes": true
+    },
+    {
+      "path": "experiments/prepare_publication.py",
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/3c353302e820ac592f5a7caf98fbcc3291d989a1/experiments/prepare_publication.py",
+      "http_status": 200,
+      "bytes": 2510,
+      "sha256": "e4e05334fa5870f162f85b6ff8dc00291aa0ccf78d2831852f225e3dda938839",
+      "matches_current_local_bytes": true
+    },
+    {
+      "path": "experiments/verify_analytic_checks.py",
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/3c353302e820ac592f5a7caf98fbcc3291d989a1/experiments/verify_analytic_checks.py",
+      "http_status": 200,
+      "bytes": 10145,
+      "sha256": "dac6a6ca59b9aa14aa5082012e9345cc8520a3d0256ad744283a32be824c3373",
+      "matches_current_local_bytes": true
+    },
+    {
+      "path": "experiments/verify_first_passage.py",
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/3c353302e820ac592f5a7caf98fbcc3291d989a1/experiments/verify_first_passage.py",
+      "http_status": 200,
+      "bytes": 14701,
+      "sha256": "5367d9e820d01e8f9e71961a7ccc87a39f488a0cc4565bce7ef6b55afd7dea2c",
+      "matches_current_local_bytes": true
+    },
+    {
+      "path": "experiments/verify_proxy_curves.py",
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/3c353302e820ac592f5a7caf98fbcc3291d989a1/experiments/verify_proxy_curves.py",
+      "http_status": 200,
+      "bytes": 12861,
+      "sha256": "a923c022db2396cc0d75ca5e6cd7dd504a5ee6c1869816e524980312a0bf0a51",
+      "matches_current_local_bytes": true
+    },
+    {
+      "path": "data/published-vector-coordinates.npz",
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/3c353302e820ac592f5a7caf98fbcc3291d989a1/data/published-vector-coordinates.npz",
+      "http_status": 200,
+      "bytes": 9822,
+      "sha256": "22791ed7563a359e9ca22722950f06cf685a9229842d30e0a9ef042cd5c19e9e",
+      "matches_current_local_bytes": true
+    },
+    {
+      "path": "data/upstream-cc0/trajectory_sf2.npz",
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/3c353302e820ac592f5a7caf98fbcc3291d989a1/data/upstream-cc0/trajectory_sf2.npz",
+      "http_status": 200,
+      "bytes": 414210,
+      "sha256": "f7e5202654c61eea6465d40a0abd28b063938fd45424fa0a60485d0a009ba381",
+      "matches_current_local_bytes": true
+    },
+    {
+      "path": "data/upstream-cc0/trajectory_sf3.npz",
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/3c353302e820ac592f5a7caf98fbcc3291d989a1/data/upstream-cc0/trajectory_sf3.npz",
+      "http_status": 200,
+      "bytes": 414259,
+      "sha256": "3492db6e27861ea028fcac26f626c13f2fa9850638a3ec4dced3dbbaa68ea39d",
+      "matches_current_local_bytes": true
+    },
+    {
+      "path": "data/upstream-cc0/trajectory_sf4.npz",
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/3c353302e820ac592f5a7caf98fbcc3291d989a1/data/upstream-cc0/trajectory_sf4.npz",
+      "http_status": 200,
+      "bytes": 418376,
+      "sha256": "c9aece17c95e9b6d2c59f0026fd6af858ee42bac88f73dd7a2677c77250c034a",
+      "matches_current_local_bytes": true
+    },
+    {
+      "path": "data/upstream-cc0/trajectory_sf5.npz",
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/3c353302e820ac592f5a7caf98fbcc3291d989a1/data/upstream-cc0/trajectory_sf5.npz",
+      "http_status": 200,
+      "bytes": 415754,
+      "sha256": "9a4797b32a3729e388ed5e380156e9386221e6771dbf6dc79f9d9598308a1bbd",
+      "matches_current_local_bytes": true
+    },
+    {
+      "path": "data/upstream.npz",
+      "url": "https://raw.githubusercontent.com/Teylersf/multiscale-reconnection-audit/3c353302e820ac592f5a7caf98fbcc3291d989a1/data/upstream.npz",
+      "http_status": 200,
+      "bytes": 146376,
+      "sha256": "4b43f71b39e98bbcae6c149a21af0a3f44ac4c5f19823c01bafe724180ac0c12",
+      "matches_current_local_bytes": true
+    }
+  ],
+  "Publish_fun_figure_URL": {
+    "url": "https://github.com/Teylersf/multiscale-reconnection-audit/raw/main/figures/first-passage-attribution.png",
+    "http_status": 200,
+    "content_type": "image/png",
+    "bytes": 160350,
+    "sha256": "99dcd2f77b79cadae26b5e4d501dba3f7990485d3472405e922a2b36f41538e3",
+    "final_host": "raw.githubusercontent.com",
+    "final_path": "/Teylersf/multiscale-reconnection-audit/main/figures/first-passage-attribution.png",
+    "checked_at_utc": "2026-10-29T18:30:50.995417+00:00",
+    "matches_current_local_bytes": true
+  },
+  "AiraXiv_anonymous_exact_submission_checks": [
+    {
+      "url": "https://airaxiv.com/papers/submissions/1276/",
+      "http_status": 404,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 179,
+      "sha256": "5547992afdadb59737c5c0feb1a35dff294cd27145bf290c031737ecf8a2577d",
+      "final_host": "airaxiv.com",
+      "final_path": "/papers/submissions/1276/",
+      "checked_at_utc": "2026-10-29T18:30:51.803414+00:00",
+      "actual_PDF_response": false,
+      "matches_release_PDF_if_actual": null,
+      "interpretation": "No actual PDF obtained; this does not establish public acceptance or rejection."
+    },
+    {
+      "url": "https://airaxiv.com/papers/submissions/1276/pdf/",
+      "http_status": 404,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 179,
+      "sha256": "5547992afdadb59737c5c0feb1a35dff294cd27145bf290c031737ecf8a2577d",
+      "final_host": "airaxiv.com",
+      "final_path": "/papers/submissions/1276/pdf/",
+      "checked_at_utc": "2026-10-29T18:30:52.400787+00:00",
+      "actual_PDF_response": false,
+      "matches_release_PDF_if_actual": null,
+      "interpretation": "No actual PDF obtained; this does not establish public acceptance or rejection."
+    }
+  ],
+  "checks": {
+    "repo_anonymously_public": true,
+    "release_published": true,
+    "tag_resolves_expected_commit": true,
+    "main_HEAD_is_expected_commit_at_check": true,
+    "release_PDF_HTTP200": true,
+    "release_PDF_expected_hash_and_length": true,
+    "pinned_manuscript_expected_hash": true,
+    "all_scripts_fixtures_public_and_match_local": true,
+    "PF_figure_public_and_matches_local": true
+  },
+  "all_GitHub_checks_passed": true,
+  "scope": "Anonymous read-only requests with TaylorKalinResearch User-Agent and 30-second deadlines. Signed final delivery queries, cookies, credentials and private local paths are excluded. No alternate AiraXiv paths were probed."
+}
